@@ -794,19 +794,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Projects New'.Form1.'Descrição Do Projeto_DataCard1'.DataCardValue3.AccessibleLabel"
+                  "fullyQualifiedName": "'Projects New'.Form1.'Valor Do Projeto_DataCard1'.DataCardValue5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Projects New'.Form1.'Descrição Do Projeto_DataCard1'.DataCardValue3.AccessibleLabel",
+                  "fullyQualifiedName": "'Projects New'.Form1.'Valor Do Projeto_DataCard1'.DataCardValue5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Projects New",
-                "type": "'Projects New'.Form1.'Descrição Do Projeto_DataCard1'.DataCardValue3"
+                "type": "'Projects New'.Form1.'Valor Do Projeto_DataCard1'.DataCardValue5"
               }
             }
           ],
@@ -854,19 +854,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Projects New'.Form1.'Valor Do Projeto_DataCard1'.DataCardValue5.AccessibleLabel"
+                  "fullyQualifiedName": "'Projects New'.Form1.'Descrição Do Projeto_DataCard1'.DataCardValue3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Projects New'.Form1.'Valor Do Projeto_DataCard1'.DataCardValue5.AccessibleLabel",
+                  "fullyQualifiedName": "'Projects New'.Form1.'Descrição Do Projeto_DataCard1'.DataCardValue3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Projects New",
-                "type": "'Projects New'.Form1.'Valor Do Projeto_DataCard1'.DataCardValue5"
+                "type": "'Projects New'.Form1.'Descrição Do Projeto_DataCard1'.DataCardValue3"
               }
             }
           ],
@@ -1555,6 +1555,36 @@
               },
               "properties": {
                 "member": "R",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.logo-shell-512"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.logo-shell-512",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "logo-shell-512",
                 "module": "App",
                 "type": "App"
               }

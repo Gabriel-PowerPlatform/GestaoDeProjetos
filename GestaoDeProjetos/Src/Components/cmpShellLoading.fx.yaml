@@ -21,7 +21,7 @@ cmpShellLoading As CanvasComponent:
 
         imgLogoLoading As image:
             BorderColor: =RGBA(32, 54, 71, 1)
-            Image: ='logo-shell-512'
+            Image: ='Instituto_Federal_de_São_Paulo_-_Marca_Vertical_2015.svg'
             X: =200
             Y: =13
             ZIndex: =1
