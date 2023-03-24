@@ -1,0 +1,42 @@
+{
+  "367880e1-e329-4a52-85f9-bfda9a608fc9": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/laborbol/releases/ase-v3/1.0.1622.3200/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "367880e1-e329-4a52-85f9-bfda9a608fc9"
+  },
+  "a47a018b-ac85-43e8-9c43-27acea55035f": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/laborbol/releases/ase-v3/1.0.1622.3200/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "UsuáriosdoOffice365"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "a47a018b-ac85-43e8-9c43-27acea55035f"
+  }
+}

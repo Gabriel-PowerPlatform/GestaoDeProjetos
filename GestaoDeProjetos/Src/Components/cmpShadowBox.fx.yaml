@@ -1,0 +1,126 @@
+cmpShadowBox As CanvasComponent:
+    Box: |-
+        ={Fill: "#00000000", Opacity: 1, BorderThickness: 0, BorderColor: "#000000", Radius: 0}
+    Edge: |-
+        ={Position: Self.EdgePositionEnum.Left, Width: 8, Color: "#00A2E8", Padding: 0}
+    EdgePositionEnum: |-
+        ={Left: "left", Top: "top", Right: "right", Bottom: "bottom"}
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =200
+    MarginBottom: =Max(Self.Shadow.Blur * 3 + Self.Shadow.OffsetY, 0)
+    MarginLeft: =Max(Self.Shadow.Blur * 3 - Self.Shadow.OffsetX, 0)
+    MarginRight: =Max(Self.Shadow.Blur * 3 + Self.Shadow.OffsetX, 0)
+    MarginTop: =Max(Self.Shadow.Blur * 3 - Self.Shadow.OffsetY,0)
+    OnReset: |-
+        =// Component by Emmanuel GALLIS (@R3dKap), created on 10-oct-2019, last updated on 26-sep-2020
+        false
+    Shadow: |-
+        ={OffsetX: 0, OffsetY: 0, Color: "#000000", Blur: 5, Opacity: 0.5}
+    ShowEdge: =true
+    Width: =320
+    X: =0
+    Y: =0
+    ZIndex: =6
+
+    imgShadowBox_SB As image:
+        FocusedBorderColor: =imgShadowBox_SB.BorderColor
+        Height: =cmpShadowBox.Height
+        HoverBorderColor: =ColorFade(imgShadowBox_SB.BorderColor, 20%)
+        HoverFill: =ColorFade(imgShadowBox_SB.Fill, 20%)
+        Image: |-
+            ="data:image/svg+xml," & EncodeUrl(
+                "<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+            <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+            <svg version='1.1'
+                xmlns='http://www.w3.org/2000/svg'
+                xmlns:xlink='http://www.w3.org/1999/xlink' preserveAspectRatio='xMidYMid meet' viewBox='0 0 " & Self.Width & " " & Self.Height & "' width='" & Self.Width & "' height='" & Self.Height & "'>
+                <g>
+                    <g>
+                        <filter id='shadow' x='-20%' y='-20%' width='200%' height='200%' filterUnits='userSpaceOnUse' primitiveUnits='userSpaceOnUse'>
+                            <feFlood></feFlood>
+                            <feComposite in2='SourceAlpha' operator='in'></feComposite>
+                            <feGaussianBlur stdDeviation='" & cmpShadowBox.Shadow.Blur & "'></feGaussianBlur>
+                            <feOffset dx='" & cmpShadowBox.Shadow.OffsetX & "' dy='" & cmpShadowBox.Shadow.OffsetY & "' result='afterOffset'></feOffset>
+                            <feFlood flood-color='" & cmpShadowBox.Shadow.Color & "' flood-opacity='" & Substitute(Text(cmpShadowBox.Shadow.Opacity), ",", ".") & "'></feFlood>
+                            <feComposite in2='afterOffset' operator='in'></feComposite>
+                            <feMorphology operator='dilate' radius='1'></feMorphology>
+                            <feComposite in2='SourceAlpha' operator='out'></feComposite>
+                        </filter>
+                    </g>        
+                    <rect 
+                        id='boxForFill' 
+                        x='" & cmpShadowBox.MarginLeft & "' 
+                        y='" & cmpShadowBox.MarginTop & "' 
+                        width='" & Self.Width - cmpShadowBox.MarginLeft - cmpShadowBox.MarginRight & "' 
+                        height='" & Self.Height - cmpShadowBox.MarginTop - cmpShadowBox.MarginBottom & "' 
+                        fill='" & cmpShadowBox.Box.Fill & "' 
+                        stroke='" & cmpShadowBox.Box.BorderColor & "' stroke-width='" & cmpShadowBox.Box.BorderThickness & "'
+                        fill-opacity='" & Substitute(Text(cmpShadowBox.Box.Opacity), ",", ".") & "'
+                        rx='" & cmpShadowBox.Box.Radius & "'
+                    />
+                    <rect 
+                        id='boxForShadow' 
+                        x='" & cmpShadowBox.MarginLeft & "' 
+                        y='" & cmpShadowBox.MarginTop & "' 
+                        width='" & Self.Width - cmpShadowBox.MarginLeft - cmpShadowBox.MarginRight & "' 
+                        height='" & Self.Height - cmpShadowBox.MarginTop - cmpShadowBox.MarginBottom & "' 
+                        rx='" & cmpShadowBox.Box.Radius & "'
+                        filter='url(#shadow)'/>
+                </g>
+                <g>
+                    " &
+                    
+             If(// ----- Edge
+                    cmpShadowBox.ShowEdge ,
+                    Switch(
+                        cmpShadowBox.Edge.Position,
+                        "left",// -- Position: left
+                        "<rect 
+                            id='boxForEdge' 
+                            x='" & cmpShadowBox.MarginLeft + cmpShadowBox.Edge.Padding & "' 
+                            y='" & cmpShadowBox.MarginTop + cmpShadowBox.Edge.Padding & "' 
+                            width='" & cmpShadowBox.Edge.Width & "' 
+                            height='" & Self.Height - cmpShadowBox.MarginTop - cmpShadowBox.MarginBottom - 2 * cmpShadowBox.Edge.Padding & "' 
+                            fill='" & cmpShadowBox.Edge.Color & "'
+                        rx='" & cmpShadowBox.Box.Radius & "'
+                        />",
+                        "top",// -- Position: top
+                        "<rect 
+                            id='boxForEdge' 
+                            x='" & cmpShadowBox.MarginLeft + cmpShadowBox.Edge.Padding & "' 
+                            y='" & cmpShadowBox.MarginTop + cmpShadowBox.Edge.Padding & "' 
+                            width='" & Self.Width - cmpShadowBox.MarginLeft - cmpShadowBox.MarginRight - 2 * cmpShadowBox.Edge.Padding & "' 
+                            height='" & cmpShadowBox.Edge.Width & "' 
+                            fill='" & cmpShadowBox.Edge.Color & "'
+                         rx='" & cmpShadowBox.Box.Radius & "'
+                        />",
+                        "right",// -- Position: right
+                        "<rect 
+                            id='boxForEdge' 
+                            x='" & Self.Width - cmpShadowBox.MarginRight - cmpShadowBox.Edge.Width - cmpShadowBox.Edge.Padding & "' 
+                            y='" & cmpShadowBox.MarginTop + cmpShadowBox.Edge.Padding & "' 
+                            width='" & cmpShadowBox.Edge.Width & "' 
+                            height='" & Self.Height - cmpShadowBox.MarginTop - cmpShadowBox.MarginBottom - 2 * cmpShadowBox.Edge.Padding & "' 
+                            fill='" & cmpShadowBox.Edge.Color & "'
+                        rx='" & cmpShadowBox.Box.Radius & "'
+                        />",
+                        "bottom",// -- Position: bottom
+                        "<rect 
+                            id='boxForEdge' 
+                            x='" & cmpShadowBox.MarginLeft + cmpShadowBox.Edge.Padding & "' 
+                            y='" & Self.Height - cmpShadowBox.MarginBottom - cmpShadowBox.Edge.Width - cmpShadowBox.Edge.Padding & "' 
+                            width='" & Self.Width - cmpShadowBox.MarginLeft - cmpShadowBox.MarginRight - 2 * cmpShadowBox.Edge.Padding & "' 
+                            height='" & cmpShadowBox.Edge.Width & "' 
+                            fill='" & cmpShadowBox.Edge.Color & "'
+                        rx='" & cmpShadowBox.Box.Radius & "'
+                        />"
+                    )
+                ) & "
+                </g>
+            </svg>"
+            )
+        PressedBorderColor: =ColorFade(imgShadowBox_SB.BorderColor, -20%)
+        PressedFill: =ColorFade(imgShadowBox_SB.Fill, -20%)
+        Width: =cmpShadowBox.Width
+        ZIndex: =2
+

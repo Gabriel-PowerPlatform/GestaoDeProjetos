@@ -1,0 +1,140 @@
+cmpPTXWorkflow As CanvasComponent:
+    currentStepFill: |-
+        =ColorValue("#EC7070")
+    currentStepId: =3
+    Fill: =RGBA(0, 0, 0, 0)
+    font: =Font.'Open Sans'
+    Height: =102
+    items: |-
+        =Table(
+            {
+                id: 1,
+                title: "Phase 1 - New Ideation"
+            },
+            {
+                id: 2,
+                title: "Phase 2 - Maturation"
+            },
+            {
+                id: 3,
+                title: "Phase 3 - Execution"
+            }
+        )
+    nextStepFill: |-
+        =ColorValue("#CCCCCC")
+    successFill: |-
+        =ColorValue("#6AC278")
+    Width: =634
+    X: =0
+    Y: =0
+    ZIndex: =9
+
+    Gallery1_1 As gallery.galleryHorizontal:
+        FocusedBorderThickness: =0
+        Height: =102
+        Items: =Parent.items
+        TemplatePadding: =0
+        TemplateSize: =208
+        Width: =634
+        ZIndex: =1
+
+        Rectangle1_5 As rectangle:
+            Fill: =RGBA(153, 153, 153, 1)
+            Height: =2
+            OnSelect: =Select(Parent)
+            Visible: =CountRows(cmpPTXWorkflow.items) <> ThisItem.id
+            Width: =Parent.TemplateWidth/2 + 10
+            X: =94
+            Y: =33
+            ZIndex: =1
+
+        Rectangle1_4 As rectangle:
+            Fill: =RGBA(153, 153, 153, 1)
+            Height: =2
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.id>1
+            Width: =Parent.TemplateWidth/2 -30
+            Y: =33
+            ZIndex: =2
+
+        Circle1_1 As circle:
+            Fill: |-
+                =If(
+                    cmpPTXWorkflow.currentStepId > ThisItem.id,
+                    cmpPTXWorkflow.successFill,
+                    If(
+                    cmpPTXWorkflow.currentStepId = ThisItem.id,
+                    cmpPTXWorkflow.currentStepFill,
+                    cmpPTXWorkflow.nextStepFill
+                )
+                )
+            Height: =50
+            OnSelect: =Select(Parent)
+            Width: =50
+            X: =Parent.X + Parent.TemplateWidth/2 - Self.Width/2
+            Y: =8
+            ZIndex: =4
+
+        Label4_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(153, 153, 153, 1)
+            Font: =cmpPTXWorkflow.font
+            Height: =27
+            OnSelect: =Select(Parent)
+            Size: =11
+            Text: =ThisItem.title
+            Width: =208
+            Y: =63
+            ZIndex: =6
+
+        Icon4_1 As icon.Add:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =32
+            Icon: |-
+                =If(
+                    cmpPTXWorkflow.currentStepId > ThisItem.id,
+                    Icon.Check,
+                    If(
+                    cmpPTXWorkflow.currentStepId = ThisItem.id,
+                    Icon.HalfFilledCircle,
+                    Icon.Add
+                )
+                )
+            OnSelect: =Select(Parent)
+            Visible: =false
+            Width: =32
+            X: =Circle1_1.X + Circle1_1.Width/2 - Self.Width/2
+            Y: =17
+            ZIndex: =7
+
+        Icon5 As icon.ChevronRight:
+            DisabledColor: =RGBA(128, 128, 128, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =15
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.id>1
+            Width: =15
+            X: =64
+            Y: =26
+            ZIndex: =8
+
+        Image1_1 As image:
+            Height: =32
+            Image: |-
+                =If(
+                    cmpPTXWorkflow.currentStepId > ThisItem.id,
+                    'fluent_checkbox-checked-20-regular',
+                    If(
+                    cmpPTXWorkflow.currentStepId = ThisItem.id,
+                    'material-symbols_error-circle-rounded-outline',
+                    Icon.Add
+                )
+                )
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.id <= cmpPTXWorkflow.currentStepId
+            Width: =32
+            X: =88
+            Y: =17
+            ZIndex: =9
+

@@ -1,0 +1,27 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": false,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": false,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "cmpShellLoading",
+    "TemplateGuid": "f0732fcdc9f747eab65ecf16f82f7126"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "638152931035710847",
+  "Name": "f0732fcdc9f747eab65ecf16f82f7126",
+  "OverridableProperties": {},
+  "TemplateOriginalName": "1e4161eeb3884f84a91ea0f31eac7635",
+  "Version": "637819315057444111"
+}

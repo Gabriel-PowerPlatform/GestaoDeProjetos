@@ -1,0 +1,8 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =Set(CorTransparente, RGBA(0,0,0,0));
+        Set(CorPrincipal, ColorValue("#2F8165"));
+        Set(CorFundo, ColorValue("#E8E8E8"));
+        Set(CorSecundaria, ColorValue("#817E81"))
+

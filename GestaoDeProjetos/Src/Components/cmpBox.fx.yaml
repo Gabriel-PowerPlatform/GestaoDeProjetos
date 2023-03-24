@@ -1,0 +1,113 @@
+cmpBox As CanvasComponent:
+    BackgroundBlur: =false
+    Border: =false
+    BorderColor: ="RGBA(0, 0, 0, 1)"
+    BorderRadius: =true
+    BorderRadiusBottomLeft: =15
+    BorderRadiusBottomRight: =15
+    BorderRadiusTopLeft: =15
+    BorderRadiusTopRight: =15
+    BorderSize: =1
+    BorderType: ="solid"
+    BoxColor: ="RGBA(255,255,255,1)"
+    BoxShadowBlur: =18
+    BoxShadowColor: |-
+        ="#ccc"
+    BoxShadowLeftRight: =3
+    BoxShadowSpread: =0
+    BoxShadowTopBottom: =0
+    BoxShadowVisibility: =true
+    Button: =false
+    ButtonFontSize: =15
+    ButtonName: ="Button"
+    ButtonTextColor: ="RGBA(255, 255, 255, 1)"
+    Fill: =RGBA(0, 0, 0, 0)
+    Gradient: =false
+    GradientColor1: ="RGBA(102, 204, 255,1)"
+    GradientColor2: ="RGBA(255, 153, 204, 1)"
+    GradientDirection: ="bottom"
+    Height: =cmpBox.ResizeableHeight
+    Margin: =true
+    MarginBottom: =10
+    MarginLeft: =10
+    MarginRight: =10
+    MarginTop: =10
+    OnReset: =
+    ResizeableHeight: =200
+    ResizeableWidth: =200
+    Width: =cmpBox.ResizeableWidth
+    X: =0
+    Y: =0
+    ZIndex: =15
+
+    HtmlBox As htmlViewer:
+        Height: =cmpBox.Height
+        HtmlText: |-
+            =If(
+                cmpBox.Button,
+                "<button style='color:" & cmpBox.ButtonTextColor & ";" & If(// ----- Margin
+                    cmpBox.Margin,
+                    "margin: " & cmpBox.MarginTop & "px " & cmpBox.MarginRight & "px " & cmpBox.MarginBottom & "px " & cmpBox.MarginLeft & "px;"
+                ) & "width:" & HtmlBox.Width - If(// ----- Margin
+                    cmpBox.Margin,
+                    30,
+                    10
+                ) & "px;height: " & HtmlBox.Height - If(// ----- Margin
+                    cmpBox.Margin,
+                    35,
+                    12
+                ) & "px;" & If(
+                    cmpBox.BackgroundBlur,
+                    "filter: blur(30px);
+                backdrop-filter: saturate(200%) blur(30px); background-color:" & cmpBox.BoxColor & ";",
+                    If(
+                        cmpBox.Gradient,
+                        "background: linear-gradient(to " & cmpBox.GradientDirection & "," & cmpBox.GradientColor1 & ", " & cmpBox.GradientColor2 & ");",
+                        "background-color:" & cmpBox.BoxColor & ";"
+                    )
+                ) & "" & If(// ----- BoxShadowVisibility
+                    cmpBox.BoxShadowVisibility,
+                    "box-shadow:" & cmpBox.BoxShadowTopBottom & "px " & cmpBox.BoxShadowLeftRight & "px " & cmpBox.BoxShadowBlur & "px " & cmpBox.BoxShadowSpread & "px " & cmpBox.BoxShadowColor & ";"
+                ) & "" & If(// ----- Radius
+                    cmpBox.BorderRadius,
+                    "border-radius: " & cmpBox.BorderRadiusTopLeft & "px " & cmpBox.BorderRadiusTopRight & "px " & cmpBox.BorderRadiusBottomRight & "px " & cmpBox.BorderRadiusBottomLeft & "px;"
+                ) & "font-size: " & cmpBox.ButtonFontSize & "px;" & If(
+                    cmpBox.Border,
+                    "border: " & cmpBox.BorderSize & "px " & cmpBox.BorderType & " " & cmpBox.BorderColor & "",
+                    "border:0px"
+                ) & "'> " & cmpBox.ButtonName & " </button>",
+                "<div style='" & If(// ----- Margin
+                    cmpBox.Margin,
+                    "margin: " & cmpBox.MarginTop & "px " & cmpBox.MarginRight & "px " & cmpBox.MarginBottom & "px " & cmpBox.MarginLeft & "px;"
+                ) & "width:" & HtmlBox.Width - If(// ----- Margin
+                    cmpBox.Margin,
+                    30,
+                    10
+                ) & "px;height: " & HtmlBox.Height - If(// ----- Margin
+                    cmpBox.Margin,
+                    35,
+                    12
+                ) & "px;" & If(
+                    cmpBox.BackgroundBlur,
+                    "filter: blur(30px);
+                backdrop-filter: saturate(200%) blur(30px); background-color:" & cmpBox.BoxColor & ";",
+                    If(
+                        cmpBox.Gradient,
+                        "background: linear-gradient(to " & cmpBox.GradientDirection & "," & cmpBox.GradientColor1 & ", " & cmpBox.GradientColor2 & ");",
+                        "background-color:" & cmpBox.BoxColor & ";"
+                    )
+                ) & "" & If(// ----- BoxShadowVisibility
+                    cmpBox.BoxShadowVisibility,
+                    "box-shadow:" & cmpBox.BoxShadowTopBottom & "px " & cmpBox.BoxShadowLeftRight & "px " & cmpBox.BoxShadowBlur & "px " & cmpBox.BoxShadowSpread & "px " & cmpBox.BoxShadowColor & ";"
+                ) & "" & If(// ----- Radius
+                    cmpBox.BorderRadius,
+                    "border-radius: " & cmpBox.BorderRadiusTopLeft & "px " & cmpBox.BorderRadiusTopRight & "px " & cmpBox.BorderRadiusBottomRight & "px " & cmpBox.BorderRadiusBottomLeft & "px;"
+                ) & "" & If(
+                    cmpBox.Border,
+                    "border: " & cmpBox.BorderSize & "px " & cmpBox.BorderType & " " & cmpBox.BorderColor & "",
+                    "border:0px"
+                ) & "'></div>"
+            )
+        Width: =cmpBox.Width
+        ZIndex: =1
+

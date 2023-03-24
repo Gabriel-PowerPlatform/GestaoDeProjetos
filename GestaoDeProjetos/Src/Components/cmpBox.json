@@ -1,0 +1,316 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": false,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": false,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "cmpBox",
+    "TemplateGuid": "994be2d015f14ccdbfaae26991cbb0a3"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Resizeable Height",
+      "Hidden": false,
+      "Name": "ResizeableHeight",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Resizeable Height",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Resizeable Width",
+      "Hidden": false,
+      "Name": "ResizeableWidth",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Resizeable Width",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Box Color",
+      "Hidden": false,
+      "Name": "BoxColor",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Box Color",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Background Blur",
+      "Hidden": false,
+      "Name": "BackgroundBlur",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Gradient",
+      "Hidden": false,
+      "Name": "Gradient",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Gradient Direction",
+      "Hidden": false,
+      "Name": "GradientDirection",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Gradient Direction",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Gradient Color 1",
+      "Hidden": false,
+      "Name": "GradientColor1",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Gradient Color 1",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Gradient Color 2",
+      "Hidden": false,
+      "Name": "GradientColor2",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Gradient Color 2",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border",
+      "Hidden": false,
+      "Name": "Border",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Border",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border Type",
+      "Hidden": false,
+      "Name": "BorderType",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Border Type",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border Color",
+      "Hidden": false,
+      "Name": "BorderColor",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Border Color",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border Size",
+      "Hidden": false,
+      "Name": "BorderSize",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Border Size",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border Radius",
+      "Hidden": false,
+      "Name": "BorderRadius",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Border Radius",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border Radius Top Left",
+      "Hidden": false,
+      "Name": "BorderRadiusTopLeft",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Border Radius Top Left",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border Radius Top Right",
+      "Hidden": false,
+      "Name": "BorderRadiusTopRight",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Border Radius Top Right",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border Radius Bottom Left",
+      "Hidden": false,
+      "Name": "BorderRadiusBottomLeft",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Border Radius Bottom Left",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border Radius Bottom Right",
+      "Hidden": false,
+      "Name": "BorderRadiusBottomRight",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Border Radius Bottom Right",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Margin",
+      "Hidden": false,
+      "Name": "Margin",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Margin",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Margin Top",
+      "Hidden": false,
+      "Name": "MarginTop",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Margin Top",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Margin Right",
+      "Hidden": false,
+      "Name": "MarginRight",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Margin Right",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Margin Bottom",
+      "Hidden": false,
+      "Name": "MarginBottom",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Margin Bottom",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Margin Left",
+      "Hidden": false,
+      "Name": "MarginLeft",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Margin Left",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Box Shadow Visibility",
+      "Hidden": false,
+      "Name": "BoxShadowVisibility",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Box Shadow Visibility",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Box Shadow Color",
+      "Hidden": false,
+      "Name": "BoxShadowColor",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Box Shadow Color",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Box Shadow Top-Bottom",
+      "Hidden": false,
+      "Name": "BoxShadowTopBottom",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Box Shadow Left-Right",
+      "Hidden": false,
+      "Name": "BoxShadowLeftRight",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Box Shadow Blur",
+      "Hidden": false,
+      "Name": "BoxShadowBlur",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Box Shadow Blur",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Box Shadow Spread",
+      "Hidden": false,
+      "Name": "BoxShadowSpread",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Box Shadow Spread",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Button",
+      "Hidden": false,
+      "Name": "Button",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Button",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Button Text Color",
+      "Hidden": false,
+      "Name": "ButtonTextColor",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Button Text Color",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Button Name",
+      "Hidden": false,
+      "Name": "ButtonName",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Button Name",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Button Font size",
+      "Hidden": false,
+      "Name": "ButtonFontSize",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Button Font size",
+      "Type": "{\"Version\":\"1.330\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "638152931035711977",
+  "Name": "994be2d015f14ccdbfaae26991cbb0a3",
+  "OverridableProperties": {},
+  "TemplateOriginalName": "3832c820ea704f38a814308a589d1e9d",
+  "Version": "637920058687332278"
+}
