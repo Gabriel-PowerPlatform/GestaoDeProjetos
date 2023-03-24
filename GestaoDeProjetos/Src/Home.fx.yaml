@@ -1,17 +1,29 @@
 Home As screen:
 
+    cmpShadowBox_3 As cmpShadowBox:
+        Box: |-
+            ={Fill: "#FFFFFF", Opacity: 1, BorderThickness: 0, BorderColor: "#000000", Radius: 10}
+        Edge: |-
+            ={Position: Self.EdgePositionEnum.Top, Width: 8, Color: "#2F8165", Padding: 0}
+        Height: =402
+        Width: =480
+        X: =885
+        Y: =96
+
     Button1 As button:
         BorderStyle: =BorderStyle.None
         DisabledFill: =CorSecundaria
         DisplayMode: =DisplayMode.Disabled
         Fill: =CorSecundaria
-        Height: =154
+        Height: =154*1
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: =""
-        Width: =1366
+        Width: =1366*1
+        X: =0*1
+        Y: =0*1
         ZIndex: =1
 
     cmpShadowBox_1 As cmpShadowBox:
@@ -21,9 +33,8 @@ Home As screen:
             ={Position: Self.EdgePositionEnum.Top, Width: 8, Color: "#2F8165", Padding: 0}
         Height: =402
         Width: =842
-        X: |
-            =54
-        Y: =96
+        X: =54*1
+        Y: =96*1
         ZIndex: =2
 
     Label1 As label:
@@ -43,13 +54,105 @@ Home As screen:
         Size: =8
         Text: ="Gerenciamento > Home"
         Width: =473
-        X: =50
+        X: =50*1
+        Y: =0*1
         ZIndex: =4
 
+    cmpShadowBox_2 As cmpShadowBox:
+        Box: |-
+            ={Fill: "#FFFFFF", Opacity: 1, BorderThickness: 0, BorderColor: "#000000", Radius: 10}
+        Edge: |-
+            ={Position: Self.EdgePositionEnum.Top, Width: 8, Color: "#2F8165", Padding: 0}
+        Height: =270
+        Width: =1312
+        X: =54
+        Y: =498
+        ZIndex: =5
+
+    Image1 As image:
+        Image: =UsuarioApp.Image
+        ImagePosition: =ImagePosition.Fill
+        RadiusBottomLeft: =100
+        RadiusBottomRight: =100
+        RadiusTopLeft: =100
+        RadiusTopRight: =100
+        X: =88
+        Y: =144
+        ZIndex: =7
+
+    Label1_2 As label:
+        Color: =CorSecundaria
+        Height: =30
+        Size: =16
+        Text: =UsuarioApp.FullName
+        Width: =473
+        X: =217
+        Y: =159
+        ZIndex: =8
+
+    Label1_3 As label:
+        Color: =CorSecundaria
+        Height: =30
+        Size: =12
+        Text: =UsuarioApp.Email
+        Width: =473
+        X: =217
+        Y: =199
+        ZIndex: =9
+
+    Image3 As image:
+        Height: =20
+        Image: =envelope
+        Width: =20
+        X: =192
+        Y: =204
+        ZIndex: =10
+
+    Image4 As image:
+        Height: =20
+        Image: ='do-utilizador'
+        Width: =20
+        X: =192
+        Y: =164
+        ZIndex: =11
+
+    Label1_4 As label:
+        Color: =CorSecundaria
+        Height: =143
+        Size: =14
+        Text: ="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not om"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =756
+        X: =97
+        Y: =312
+        ZIndex: =12
+
+    Label1_5 As label:
+        Color: =RGBA(128, 128, 128, 1)
+        Size: =20
+        Text: ="Boa noite, " & UsuarioApp.FullName
+        Width: =473
+        X: =97
+        Y: =272
+        ZIndex: =13
+
+    Label4 As label:
+        Height: =768
+        OnSelect: =Reset(Menu_1)
+        Text: =""
+        Visible: =!Menu_1.RetrairMenuSaida
+        Width: =1366
+        ZIndex: =14
+
     Menu_1 As Menu:
+        ColeçãoDoMenu: |-
+            =Table({ID:1,Nome:"Home",Descrição:"",Tela:Home,Ver:true,Ordem:1,Icon:"",ImagemBranco:casa,ImagemPreto:casa}
+            ,{ID:2,Nome:"Projects",Descrição:"",Tela:Projects,Ver:true,Ordem:2,Icon:"",ImagemBranco:cedula,ImagemPreto:cedula}
+            ,{ID:3,Nome:"Settings",Descrição:"",Tela:Settings,Ver:true,Ordem:3,Icon:"",ImagemBranco:definicoes,ImagemPreto:definicoes}
+            )
         CorFonte: =CorSecundaria
         CorTema: =CorPrincipal
         Height: =768
         RetrairMenu: =true
-        ZIndex: =5
+        ZIndex: =15
 

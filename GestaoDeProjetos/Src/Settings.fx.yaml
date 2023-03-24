@@ -1,2 +1,13 @@
 Settings As screen:
 
+    Menu_3 As Menu:
+        ColeçãoDoMenu: |-
+            =Table({ID:1,Nome:"Home",Descrição:"",Tela:Home,Ver:true,Ordem:1,Icon:"",ImagemBranco:casa,ImagemPreto:casa}
+            ,{ID:2,Nome:"Projects",Descrição:"",Tela:Projects,Ver:true,Ordem:2,Icon:"",ImagemBranco:cedula,ImagemPreto:cedula}
+            ,{ID:3,Nome:"Settings",Descrição:"",Tela:Settings,Ver:true,Ordem:3,Icon:"",ImagemBranco:definicoes,ImagemPreto:definicoes}
+            )
+        CorFonte: =CorSecundaria
+        CorTema: =CorPrincipal
+        Height: =768
+        RetrairMenu: =true
+

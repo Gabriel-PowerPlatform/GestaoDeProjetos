@@ -1,2 +1,268 @@
 Projects As screen:
 
+    Button1_2 As button:
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =CorSecundaria
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =CorSecundaria
+        Height: =154*1
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: =""
+        Width: =1366*1
+        X: =0*1
+        Y: =0*1
+        ZIndex: =1
+
+    cmpShadowBox_4 As cmpShadowBox:
+        Box: |-
+            ={Fill: "#FFFFFF", Opacity: 1, BorderThickness: 0, BorderColor: "#000000", Radius: 10}
+        Edge: |-
+            ={Position: Self.EdgePositionEnum.Top, Width: 8, Color: "#2F8165", Padding: 0}
+        Height: =672
+        Width: =1312
+        X: =54*1
+        Y: =96*1
+        ZIndex: =2
+
+    Label1_6 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Size: =20
+        Text: |-
+            ="Gerenciamento de Projetos
+            "
+        Width: =473
+        X: =76
+        Y: =54
+        ZIndex: =3
+
+    Label1_7 As label:
+        Color: =RGBA(255, 255, 0, 1)
+        Height: =17
+        Size: =8
+        Text: ="Gerenciamento > Projetos"
+        Width: =473
+        X: =50*1
+        Y: =0*1
+        ZIndex: =4
+
+    Label4_2 As label:
+        Height: =768
+        OnSelect: =Reset(Menu_2)
+        Text: =""
+        Visible: =!Menu_2.RetrairMenuSaida
+        Width: =1366
+        ZIndex: =5
+
+    Menu_2 As Menu:
+        ColeçãoDoMenu: |-
+            =Table({ID:1,Nome:"Home",Descrição:"",Tela:Home,Ver:true,Ordem:1,Icon:"",ImagemBranco:casa,ImagemPreto:casa}
+            ,{ID:2,Nome:"Projects",Descrição:"",Tela:Projects,Ver:true,Ordem:2,Icon:"",ImagemBranco:cedula,ImagemPreto:cedula}
+            ,{ID:3,Nome:"Settings",Descrição:"",Tela:Settings,Ver:true,Ordem:3,Icon:"",ImagemBranco:definicoes,ImagemPreto:definicoes}
+            )
+        CorFonte: =CorSecundaria
+        CorTema: =CorPrincipal
+        Height: =768
+        RetrairMenu: =true
+        ZIndex: =6
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =545
+        Items: =Projetos
+        Layout: =Layout.Vertical
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =196
+        Transition: =Transition.Push
+        Width: =1244
+        WrapCount: =4
+        X: =88
+        Y: =193
+        ZIndex: =10
+
+        Button3 As button:
+            BorderThickness: =1
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =190
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Text: =""
+            Width: =303
+            X: =4
+            Y: =3
+            ZIndex: =1
+
+        Label5 As label:
+            Height: =30
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.'Nome Do Projeto'
+            Width: =271
+            X: =28
+            Y: =7
+            ZIndex: =2
+
+        Label5_1 As label:
+            Height: =79
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.'Descrição Do Projeto'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =248
+            X: =28
+            Y: =35
+            ZIndex: =3
+
+        Rectangle1 As rectangle:
+            DisabledFill: =CorPrincipal
+            DisplayMode: =DisplayMode.Disabled
+            Height: =10
+            OnSelect: =Select(Parent)
+            Width: =10
+            X: =14
+            Y: =15
+            ZIndex: =4
+
+        Label5_2 As label:
+            Align: =Align.Center
+            BorderThickness: =1
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Height: =14
+            OnSelect: =Select(Parent)
+            Size: =8
+            Text: =ThisItem.ID
+            Width: =30
+            X: =263
+            Y: =173
+            ZIndex: =5
+
+        Label5_3 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =37
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.Metodologia
+            Width: =248
+            X: =9
+            Y: =86
+            ZIndex: =6
+
+        Label5_4 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =37
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: |-
+                =Text(Value(ThisItem.'Valor Do Projeto'), "R$" & "#0.000,00")
+            Width: =248
+            X: =9
+            Y: =114
+            ZIndex: =7
+
+    btnAddProject As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =10
+
+        Button2 As button:
+            Fill: =CorPrincipal
+            Height: =35
+            HoverFill: =ColorFade(CorPrincipal, 0.20)
+            OnSelect: |-
+                =ResetForm(Form1);
+                NewForm(Form1);
+                Navigate('Projects New', ScreenTransition.Fade)
+            PaddingLeft: =30
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =CorPrincipal
+            Size: =12
+            Text: ="Adicionar projeto"
+            Width: =180
+            X: =1140
+            Y: =136
+            ZIndex: =7
+
+        Image6 As image:
+            Height: =30
+            Image: ='mais-pequeno (1)'
+            OnSelect: |-
+                =ResetForm(Form1);
+                NewForm(Form1);
+                Navigate('Projects New', ScreenTransition.Fade)
+            Width: =30
+            X: =1143
+            Y: =138
+            ZIndex: =8
+
+        Button2_1 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =35
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0,0,0,0)
+            OnSelect: |-
+                =ResetForm(Form1);
+                NewForm(Form1);
+                Navigate('Projects New', ScreenTransition.Fade)
+            PaddingLeft: =30
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: =""
+            Width: =180
+            X: =1140
+            Y: =136
+            ZIndex: =9
+
+    Button3_1 As button:
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =46
+        OnSelect: =
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Text: =""
+        Width: =805
+        X: =88
+        Y: =130
+        ZIndex: =11
+
+    TextInput1 As text:
+        BorderStyle: =BorderStyle.None
+        Default: =""
+        Fill: =RGBA(0, 0, 0, 0)
+        HintText: ="Procurar"
+        HoverFill: =RGBA(0, 0, 0, 0)
+        PaddingLeft: =5
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Size: =12
+        Width: =659
+        X: =126
+        Y: =133
+        ZIndex: =12
+
+    Image9 As image:
+        Height: =25
+        Image: =procurar
+        Width: =20
+        X: =100
+        Y: =141
+        ZIndex: =13
+

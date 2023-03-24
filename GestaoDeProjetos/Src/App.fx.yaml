@@ -4,5 +4,6 @@ App As appinfo:
         =Set(CorTransparente, RGBA(0,0,0,0));
         Set(CorPrincipal, ColorValue("#2F8165"));
         Set(CorFundo, ColorValue("#E8E8E8"));
-        Set(CorSecundaria, ColorValue("#817E81"))
+        Set(CorSecundaria, ColorValue("#817E81"));
+        Set(UsuarioApp, User())
 

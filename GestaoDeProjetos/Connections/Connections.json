@@ -38,5 +38,30 @@
     "dependencies": {},
     "dependents": [],
     "id": "a47a018b-ac85-43e8-9c43-27acea55035f"
+  },
+  "ac5c8d7f-6421-4314-98b0-03aadb82f488": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1623/1.0.1623.3210/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://35z65x.sharepoint.com/sites/GestaoDeProjetos": {
+        "dataSources": {
+          "Projetos": {
+            "tableName": "6eb1cab4-8479-4a36-9164-a72f601c5791"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Projetos"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "ac5c8d7f-6421-4314-98b0-03aadb82f488"
   }
 }

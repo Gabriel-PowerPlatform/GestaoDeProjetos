@@ -136,7 +136,7 @@
         "Name": "imgShadowBox_SB",
         "Parent": "cmpShadowBox",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 46,
+        "PublishOrderIndex": 110,
         "Rules": [
           {
             "Category": "Data",

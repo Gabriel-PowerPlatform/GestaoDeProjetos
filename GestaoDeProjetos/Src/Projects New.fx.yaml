@@ -1,0 +1,438 @@
+"'Projects New' As screen":
+
+    Button1_3 As button:
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =CorSecundaria
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =CorSecundaria
+        Height: =154*1
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: =""
+        Width: =1366*1
+        X: =0*1
+        Y: =0*1
+        ZIndex: =1
+
+    cmpShadowBox_5 As cmpShadowBox:
+        Box: |-
+            ={Fill: "#FFFFFF", Opacity: 1, BorderThickness: 0, BorderColor: "#000000", Radius: 10}
+        Edge: |-
+            ={Position: Self.EdgePositionEnum.Top, Width: 8, Color: "#2F8165", Padding: 0}
+        Height: =672
+        Width: =1366
+        Y: =96*1
+        ZIndex: =2
+
+    Label1_8 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Size: =20
+        Text: |-
+            ="Gerenciamento de Projetos
+            "
+        Width: =473
+        X: =22
+        Y: =54
+        ZIndex: =3
+
+    Label1_9 As label:
+        Color: =RGBA(255, 255, 0, 1)
+        Height: =17
+        Size: =8
+        Text: ="Gerenciamento > Projetos"
+        Width: =473
+        Y: =0*1
+        ZIndex: =4
+
+    Icon3 As icon.CancelBadge:
+        Color: =CorPrincipal
+        Height: =25
+        HoverColor: =ColorFade(CorPrincipal, 20%)
+        Icon: =Icon.CancelBadge
+        OnSelect: =Navigate(Projects, ScreenTransition.Fade)
+        Width: =25
+        X: =1311
+        Y: =129
+        ZIndex: =15
+
+    Form1 As form:
+        DataSource: =Projetos
+        Height: =546
+        Width: =1303
+        X: =32
+        Y: =195
+        ZIndex: =16
+
+        DataCard1 As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =348
+            Width: =1302
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            Button2_4 As button:
+                BorderThickness: =1
+                Fill: =CorPrincipal
+                FocusedBorderThickness: =1
+                Height: =35
+                HoverFill: =ColorFade(CorPrincipal, 0.20)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =CorPrincipal
+                Size: =12
+                Text: ="Salvar"
+                Width: =95
+                X: =1184
+                Y: =300
+                ZIndex: =1
+
+            Button2_5 As button:
+                BorderThickness: =1
+                Color: =RGBA(116, 116, 116, 1)
+                Fill: =CorFundo
+                FocusedBorderThickness: =1
+                Height: =35
+                HoverColor: =RGBA(116, 116, 116, 1)
+                HoverFill: =ColorFade(CorFundo, 0.20)
+                OnSelect: =Navigate(Projects, ScreenTransition.Fade)
+                PressedColor: =RGBA(116, 116, 116, 1)
+                PressedFill: =CorFundo
+                Size: =12
+                Text: ="Cancelar"
+                Width: =129
+                X: =1037
+                Y: =300
+                ZIndex: =2
+
+        "'Nome Do Projeto_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="NomeDoProjeto"
+            Default: =ThisItem.'Nome Do Projeto'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Projetos],DataSourceInfo.DisplayName,"NomeDoProjeto")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Projetos], DataSourceInfo.MaxLength, "NomeDoProjeto")
+            Required: =false
+            Update: =DataCardValue2.Text
+            Width: =434
+            X: =0
+            Y: =0
+            ZIndex: =17
+
+            DataCardKey2 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Height: =34*1
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30*1
+                Y: =10*1
+                ZIndex: =1
+
+            ErrorMessage2 As label:
+                AutoHeight: =true
+                Height: =10*1
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30*1
+                Y: =DataCardValue2.Y + DataCardValue2.Height
+                ZIndex: =2
+
+            StarVisible2 As label:
+                Align: =Align.Center
+                Color: =RGBA(0, 0, 0, 1)
+                Height: =DataCardKey2.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30*1
+                Wrap: =false
+                X: =0*1
+                Y: =DataCardKey2.Y
+                ZIndex: =3
+
+            Button4 As button:
+                BorderThickness: =1
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Height: =40*1
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Text: =""
+                Width: =374*1
+                X: =30*1
+                Y: =48*1
+                ZIndex: =4
+
+            DataCardValue2 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderStyle: =BorderStyle.None
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                PressedFill: =RGBA(0, 0, 0, 0)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =11
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30*1
+                Y: =DataCardKey2.Y + DataCardKey2.Height + 5
+                ZIndex: =5
+
+        "'Descrição Do Projeto_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="DescricaoDoProjeto"
+            Default: =ThisItem.'Descrição Do Projeto'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Projetos],DataSourceInfo.DisplayName,"DescricaoDoProjeto")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Projetos], DataSourceInfo.MaxLength, "DescricaoDoProjeto")
+            Required: =false
+            Update: =DataCardValue3.Text
+            Width: =434
+            X: =1
+            Y: =0
+            ZIndex: =17
+
+            DataCardKey3 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue3 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey3.Y + DataCardKey3.Height + 5
+                ZIndex: =2
+
+            ErrorMessage3 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue3.Y + DataCardValue3.Height
+                ZIndex: =3
+
+            StarVisible3 As label:
+                Align: =Align.Center
+                Height: =DataCardKey3.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey3.Y
+                ZIndex: =4
+
+        Metodologia_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Metodologia"
+            Default: =ThisItem.Metodologia
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Projetos],DataSourceInfo.DisplayName,"Metodologia")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Projetos], DataSourceInfo.MaxLength, "Metodologia")
+            Required: =false
+            Update: =DataCardValue4.Text
+            Width: =434
+            X: =2
+            Y: =0
+            ZIndex: =17
+
+            DataCardKey2_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Height: =34*1
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30*1
+                Y: =10*1
+                ZIndex: =1
+
+            ErrorMessage2_1 As label:
+                AutoHeight: =true
+                Height: =10*1
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30*1
+                Y: =DataCardValue4.Y + DataCardValue4.Height
+                ZIndex: =2
+
+            StarVisible2_1 As label:
+                Align: =Align.Center
+                Color: =RGBA(0, 0, 0, 1)
+                Height: =DataCardKey2_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30*1
+                Wrap: =false
+                X: =0*1
+                Y: =DataCardKey2_1.Y
+                ZIndex: =3
+
+            Button4_1 As button:
+                BorderThickness: =1
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Height: =40*1
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Text: =""
+                Width: =374*1
+                X: =30*1
+                Y: =48*1
+                ZIndex: =4
+
+            DataCardValue4 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderStyle: =BorderStyle.None
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                PressedFill: =RGBA(0, 0, 0, 0)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =11
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30*1
+                Y: =DataCardKey2_1.Y + DataCardKey2_1.Height + 5
+                ZIndex: =5
+
+        "'Valor Do Projeto_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ValorDoProjeto"
+            Default: =ThisItem.'Valor Do Projeto'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Projetos],DataSourceInfo.DisplayName,"ValorDoProjeto")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Projetos], DataSourceInfo.MaxLength, "ValorDoProjeto")
+            Required: =false
+            Update: =DataCardValue5.Text
+            Width: =434
+            X: =0
+            Y: =1
+            ZIndex: =17
+
+            DataCardKey5 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue5 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                ZIndex: =2
+
+            ErrorMessage5 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue5.Y + DataCardValue5.Height
+                ZIndex: =3
+
+            StarVisible5 As label:
+                Align: =Align.Center
+                Height: =DataCardKey5.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey5.Y
+                ZIndex: =4
+
+    Label1_10 As label:
+        Color: =CorPrincipal
+        FontWeight: =FontWeight.Semibold
+        Size: =20
+        Text: ="Novo Projeto"
+        Width: =473
+        X: =33
+        Y: =129
+        ZIndex: =17
+
