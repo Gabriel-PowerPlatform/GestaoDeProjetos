@@ -60,6 +60,7 @@
     Form1 As form:
         DataSource: =Projetos
         Height: =546
+        Item: =VarProject
         Width: =1303
         X: =32
         Y: =195
@@ -81,6 +82,12 @@
                 FocusedBorderThickness: =1
                 Height: =35
                 HoverFill: =ColorFade(CorPrincipal, 0.20)
+                OnSelect: |-
+                    =UpdateContext({VarLoading:true});
+                    SubmitForm(Form1);
+                    Notify("Registro criado com sucesso",NotificationType.Success);
+                    UpdateContext({VarLoading:false});
+                    Navigate(Projects,ScreenTransition.Fade)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =CorPrincipal
                 Size: =12
@@ -479,9 +486,16 @@
         Color: =CorPrincipal
         FontWeight: =FontWeight.Semibold
         Size: =20
-        Text: ="Novo Projeto"
+        Text: |-
+            =If(Form1.Mode = FormMode.New, "Novo Projeto",
+                Form1.Mode = FormMode.Edit, "Editar " & VarProject.'Nome Do Projeto')
+                
         Width: =473
         X: =33
         Y: =129
         ZIndex: =17
+
+    cmpShellLoading_2 As cmpShellLoading:
+        Visible: =VarLoading
+        ZIndex: =18
 

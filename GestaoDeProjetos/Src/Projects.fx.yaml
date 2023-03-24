@@ -162,11 +162,35 @@ Projects As screen:
             OnSelect: =Select(Parent)
             Size: =12
             Text: |-
-                =Text(Value(ThisItem.'Valor Do Projeto'), "R$" & "#0.000,00")
+                =Text(Value(ThisItem.'Valor Do Projeto'), "R$" & "#.000,00")
             Width: =248
             X: =9
             Y: =114
             ZIndex: =7
+
+        Button3_2 As button:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            Color: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(116, 116, 116, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =190
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: |-
+                =Set(VarProject, ThisItem);
+                EditForm(Form1);
+                Navigate('Projects New', ScreenTransition.Fade)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Text: =""
+            Width: =303
+            X: =4
+            Y: =3
+            ZIndex: =8
 
     btnAddProject As group:
         Height: =5

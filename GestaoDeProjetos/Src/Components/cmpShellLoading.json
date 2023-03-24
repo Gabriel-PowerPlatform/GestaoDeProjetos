@@ -72,7 +72,7 @@
         "Name": "rectBgLoading",
         "Parent": "cmpShellLoading",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 114,
+        "PublishOrderIndex": 118,
         "Rules": [
           {
             "Category": "Design",
@@ -238,7 +238,7 @@
             "Name": "imgLogoLoading",
             "Parent": "conLoading",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 116,
+            "PublishOrderIndex": 120,
             "Rules": [
               {
                 "Category": "Data",
@@ -513,7 +513,7 @@
             "Name": "imgLoading",
             "Parent": "conLoading",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 117,
+            "PublishOrderIndex": 121,
             "Rules": [
               {
                 "Category": "Data",
@@ -757,7 +757,7 @@
         "Name": "conLoading",
         "Parent": "cmpShellLoading",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 115,
+        "PublishOrderIndex": 119,
         "Rules": [
           {
             "Category": "Design",
