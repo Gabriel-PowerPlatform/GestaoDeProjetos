@@ -1,4 +1,5 @@
 Home As screen:
+    OnVisible: =Reset(Menu_1)
 
     cmpShadowBox_3 As cmpShadowBox:
         Box: |-

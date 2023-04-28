@@ -1,4 +1,5 @@
 Projects As screen:
+    OnVisible: =Reset(Menu_2)
 
     Button1_2 As button:
         BorderStyle: =BorderStyle.None
@@ -48,26 +49,6 @@ Projects As screen:
         Y: =0*1
         ZIndex: =4
 
-    Label4_2 As label:
-        Height: =768
-        OnSelect: =Reset(Menu_2)
-        Text: =""
-        Visible: =!Menu_2.RetrairMenuSaida
-        Width: =1366
-        ZIndex: =5
-
-    Menu_2 As Menu:
-        ColeçãoDoMenu: |-
-            =Table({ID:1,Nome:"Home",Descrição:"",Tela:Home,Ver:true,Ordem:1,Icon:"",ImagemBranco:casa,ImagemPreto:casa}
-            ,{ID:2,Nome:"Projects",Descrição:"",Tela:Projects,Ver:true,Ordem:2,Icon:"",ImagemBranco:cedula,ImagemPreto:cedula}
-            ,{ID:3,Nome:"Settings",Descrição:"",Tela:Settings,Ver:true,Ordem:3,Icon:"",ImagemBranco:definicoes,ImagemPreto:definicoes}
-            )
-        CorFonte: =CorSecundaria
-        CorTema: =CorPrincipal
-        Height: =768
-        RetrairMenu: =true
-        ZIndex: =6
-
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =545
         Items: =Projetos
@@ -80,7 +61,7 @@ Projects As screen:
         WrapCount: =4
         X: =88
         Y: =193
-        ZIndex: =10
+        ZIndex: =8
 
         Button3 As button:
             BorderThickness: =1
@@ -192,6 +173,37 @@ Projects As screen:
             Y: =3
             ZIndex: =8
 
+    Button3_1 As button:
+        BorderThickness: =1
+        DisabledBorderColor: =RGBA(116, 116, 116, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =46
+        OnSelect: =
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Text: =""
+        Width: =805
+        X: =88
+        Y: =130
+        ZIndex: =9
+
+    TextInput1 As text:
+        BorderStyle: =BorderStyle.None
+        Default: =""
+        Fill: =RGBA(0, 0, 0, 0)
+        HintText: ="Procurar"
+        HoverFill: =RGBA(0, 0, 0, 0)
+        PaddingLeft: =5
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Size: =12
+        Width: =659
+        X: =126
+        Y: =133
+        ZIndex: =10
+
     btnAddProject As group:
         Height: =5
         Width: =5
@@ -215,7 +227,7 @@ Projects As screen:
             Width: =180
             X: =1140
             Y: =136
-            ZIndex: =7
+            ZIndex: =5
 
         Image6 As image:
             Height: =30
@@ -227,7 +239,7 @@ Projects As screen:
             Width: =30
             X: =1143
             Y: =138
-            ZIndex: =8
+            ZIndex: =6
 
         Button2_1 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -249,38 +261,7 @@ Projects As screen:
             Width: =180
             X: =1140
             Y: =136
-            ZIndex: =9
-
-    Button3_1 As button:
-        BorderThickness: =1
-        DisabledBorderColor: =RGBA(116, 116, 116, 1)
-        DisabledFill: =RGBA(255, 255, 255, 1)
-        DisplayMode: =DisplayMode.Disabled
-        Height: =46
-        OnSelect: =
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Text: =""
-        Width: =805
-        X: =88
-        Y: =130
-        ZIndex: =11
-
-    TextInput1 As text:
-        BorderStyle: =BorderStyle.None
-        Default: =""
-        Fill: =RGBA(0, 0, 0, 0)
-        HintText: ="Procurar"
-        HoverFill: =RGBA(0, 0, 0, 0)
-        PaddingLeft: =5
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Size: =12
-        Width: =659
-        X: =126
-        Y: =133
-        ZIndex: =12
+            ZIndex: =7
 
     Image9 As image:
         Height: =25
@@ -288,5 +269,25 @@ Projects As screen:
         Width: =20
         X: =100
         Y: =141
+        ZIndex: =11
+
+    Label4_2 As label:
+        Height: =768
+        OnSelect: =Reset(Menu_2)
+        Text: =""
+        Visible: =!Menu_2.RetrairMenuSaida
+        Width: =1366
+        ZIndex: =12
+
+    Menu_2 As Menu:
+        ColeçãoDoMenu: |-
+            =Table({ID:1,Nome:"Home",Descrição:"",Tela:Home,Ver:true,Ordem:1,Icon:"",ImagemBranco:casa,ImagemPreto:casa}
+            ,{ID:2,Nome:"Projects",Descrição:"",Tela:Projects,Ver:true,Ordem:2,Icon:"",ImagemBranco:cedula,ImagemPreto:cedula}
+            ,{ID:3,Nome:"Settings",Descrição:"",Tela:Settings,Ver:true,Ordem:3,Icon:"",ImagemBranco:definicoes,ImagemPreto:definicoes}
+            )
+        CorFonte: =CorSecundaria
+        CorTema: =CorPrincipal
+        Height: =768
+        RetrairMenu: =true
         ZIndex: =13
 

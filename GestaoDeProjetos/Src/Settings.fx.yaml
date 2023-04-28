@@ -1,4 +1,5 @@
 Settings As screen:
+    OnVisible: =Reset(Menu_3)
 
     Menu_3 As Menu:
         ColeçãoDoMenu: |-

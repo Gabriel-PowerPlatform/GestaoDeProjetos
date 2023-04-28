@@ -1,8 +1,5 @@
 {
   "367880e1-e329-4a52-85f9-bfda9a608fc9": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "Office 365 Users",
@@ -20,9 +17,6 @@
     "id": "367880e1-e329-4a52-85f9-bfda9a608fc9"
   },
   "a47a018b-ac85-43e8-9c43-27acea55035f": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "Office 365 Users",
@@ -40,9 +34,6 @@
     "id": "a47a018b-ac85-43e8-9c43-27acea55035f"
   },
   "ac5c8d7f-6421-4314-98b0-03aadb82f488": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "displayName": "SharePoint",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1623/1.0.1623.3210/sharepointonline/icon.png",
