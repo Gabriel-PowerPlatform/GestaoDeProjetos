@@ -88,7 +88,7 @@ Home As screen:
         Size: =16
         Text: =UsuarioApp.FullName
         Width: =473
-        X: =217
+        X: =223
         Y: =159
         ZIndex: =8
 
@@ -98,7 +98,7 @@ Home As screen:
         Size: =12
         Text: =UsuarioApp.Email
         Width: =473
-        X: =217
+        X: =223
         Y: =199
         ZIndex: =9
 
@@ -106,7 +106,7 @@ Home As screen:
         Height: =20
         Image: =envelope
         Width: =20
-        X: =192
+        X: =204
         Y: =204
         ZIndex: =10
 
@@ -114,7 +114,7 @@ Home As screen:
         Height: =20
         Image: ='do-utilizador'
         Width: =20
-        X: =192
+        X: =204
         Y: =164
         ZIndex: =11
 
@@ -131,12 +131,140 @@ Home As screen:
 
     Label1_5 As label:
         Color: =RGBA(128, 128, 128, 1)
+        FontWeight: =FontWeight.Bold
         Size: =20
-        Text: ="Boa noite, " & UsuarioApp.FullName
+        Text: ="Boa noite, " & UsuarioApp.FullName & "."
         Width: =473
         X: =97
         Y: =272
         ZIndex: =13
+
+    cmpShadowBox_10 As cmpShadowBox:
+        Box: |-
+            ={Fill: "#2F8165", Opacity: 1, BorderThickness: 0, BorderColor: "#000000", Radius: 10}
+        Height: =164
+        ShowEdge: =false
+        Width: =201
+        X: =921
+        Y: =145
+        ZIndex: =14
+
+    cmpShadowBox_11 As cmpShadowBox:
+        Box: |-
+            ={Fill: "#2F8165", Opacity: 1, BorderThickness: 0, BorderColor: "#000000", Radius: 10}
+        Height: =164
+        ShowEdge: =false
+        Width: =201
+        X: =1128
+        Y: =145
+        ZIndex: =15
+
+    cmpShadowBox_12 As cmpShadowBox:
+        Box: |-
+            ={Fill: "#2F8165", Opacity: 1, BorderThickness: 0, BorderColor: "#000000", Radius: 10}
+        Height: =164
+        ShowEdge: =false
+        Width: =201
+        X: =921
+        Y: =301
+        ZIndex: =16
+
+    cmpShadowBox_13 As cmpShadowBox:
+        Box: |-
+            ={Fill: "#2F8165", Opacity: 1, BorderThickness: 0, BorderColor: "#000000", Radius: 10}
+        Height: =164
+        ShowEdge: =false
+        Width: =201
+        X: =1128
+        Y: =301
+        ZIndex: =17
+
+    Label1_10 As label:
+        FontWeight: =FontWeight.Semibold
+        Size: =14
+        Text: ="Acesse os documentos."
+        Width: =473
+        X: =88
+        Y: =531
+        ZIndex: =18
+
+    ProjectProcess_5 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(32, 54, 71, 1)
+        FontWeight: =FontWeight.Semibold
+        Size: =14
+        Text: ="Focal Points"
+        Width: =148
+        X: =1050
+        Y: =531
+        ZIndex: =19
+
+    Document1_2 As label:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Height: =30
+        OnSelect: |-
+            =Launch("mailto:may.amorelli@shell.com")
+        Size: =14
+        Text: ="Gabriel Souza De Lima"
+        Width: =216
+        X: =1017
+        Y: =682
+        ZIndex: =20
+
+    Circle2 As circle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledFill: =RGBA(153, 153, 153, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(100, 118, 132, 1)
+        Height: =60
+        Width: =63
+        X: =1093
+        Y: =596
+        ZIndex: =21
+
+    Icon3_5 As icon.Person:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Height: =30
+        Icon: =Icon.Person
+        Width: =30
+        X: =1109
+        Y: =611
+        ZIndex: =22
+
+    HtmlText1_1 As htmlViewer:
+        Height: =38
+        HtmlText: |-
+            ="<a href='https://35z65x.sharepoint.com/sites/GestaoDeProjetos/Documentos%20Compartilhados/Forms/AllItems.aspx'>Documents</a>"
+        Size: =14
+        Width: =396
+        X: =126
+        Y: =573
+        ZIndex: =23
+
+    Image11 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Height: =30
+        Image: ='envelope_1'
+        OnSelect: |-
+            =Launch("mailto:gabrielpowerapps@outlook.com")
+        Width: =30
+        X: =987
+        Y: =682
+        ZIndex: =24
+
+    Image11_1 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Height: =30
+        Image: ='arquivo-pdf'
+        OnSelect: |-
+            =Launch("mailto:gabrielpowerapps@outlook.com")
+        Width: =30
+        X: =91
+        Y: =577
+        ZIndex: =25
 
     Label4 As label:
         Height: =768
@@ -144,7 +272,7 @@ Home As screen:
         Text: =""
         Visible: =!Menu_1.RetrairMenuSaida
         Width: =1366
-        ZIndex: =14
+        ZIndex: =26
 
     Menu_1 As Menu:
         ColeçãoDoMenu: |-
@@ -156,5 +284,101 @@ Home As screen:
         CorTema: =CorPrincipal
         Height: =768
         RetrairMenu: =true
-        ZIndex: =15
+        ZIndex: =27
+
+    Label1_11 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        Size: =14
+        Text: ="Projetos"
+        Width: =146
+        X: =947
+        Y: =261
+        ZIndex: =28
+
+    Label1_12 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        Size: =14
+        Text: ="Agile"
+        Width: =146
+        X: =1155
+        Y: =261
+        ZIndex: =29
+
+    Label1_13 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        Size: =14
+        Text: ="Waterfall"
+        Width: =146
+        X: =948
+        Y: =417
+        ZIndex: =30
+
+    Label1_14 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =32
+        Size: =14
+        Text: ="Hybrid"
+        Width: =146
+        X: =1156
+        Y: =417
+        ZIndex: =31
+
+    Label1_15 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =83
+        Size: =20
+        Text: =CountRows(Projetos)
+        Width: =146
+        X: =947
+        Y: =178
+        ZIndex: =32
+
+    Label1_16 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =83
+        Size: =20
+        Text: =CountRows(Filter(Projetos, Metodologia = "Agile"))
+        Width: =146
+        X: =1156
+        Y: =178
+        ZIndex: =33
+
+    Label1_17 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =83
+        Size: =20
+        Text: =0
+        Width: =146
+        X: =947
+        Y: =334
+        ZIndex: =34
+
+    Label1_18 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =83
+        Size: =20
+        Text: =0
+        Width: =146
+        X: =1155
+        Y: =334
+        ZIndex: =35
 

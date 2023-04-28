@@ -136,7 +136,7 @@
         "Name": "imgShadowBox_SB",
         "Parent": "cmpShadowBox",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 205,
+        "PublishOrderIndex": 455,
         "Rules": [
           {
             "Category": "Data",
@@ -403,7 +403,7 @@
       "Box",
       "Edge"
     ],
-    "LastModifiedTimestamp": "638182716613812153",
+    "LastModifiedTimestamp": "638183038135260468",
     "Name": "cmpShadowBox",
     "Rules": [
       {
@@ -604,7 +604,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638182716613812153",
+  "LastModifiedTimestamp": "638183038135260468",
   "Name": "5af7806998cc4ce198fdc3674daccac7",
   "OverridableProperties": {},
   "TemplateOriginalName": "9e94d4f336e2477cafcdf589f1a66ecc",

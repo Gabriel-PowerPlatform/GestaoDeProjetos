@@ -52,7 +52,12 @@ Projects As screen:
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =545
-        Items: =Projetos
+        Items: |-
+            =If(IsBlank(TextInput1.Text),
+                Projetos,
+                
+                Filter(Projetos, StartsWith('Nome Da Demanda',TextInput1.Text) || 
+                                    StartsWith(Orçamento,TextInput1.Text)))
         Layout: =Layout.Vertical
         ShowScrollbar: =false
         TemplatePadding: =0
@@ -124,7 +129,7 @@ Projects As screen:
             Size: =8
             Text: =ThisItem.ID
             Width: =30
-            X: =263
+            X: =268
             Y: =173
             ZIndex: =5
 
@@ -145,7 +150,7 @@ Projects As screen:
             OnSelect: =Select(Parent)
             Size: =12
             Text: |-
-                =Text(Value(ThisItem.Orçamento), "R$" & "#.000,00")
+                ="R$: " &Text(ThisItem.Orçamento,"$: ###,###.00","pt-BR")
             Width: =248
             X: =9
             Y: =114
@@ -163,6 +168,10 @@ Projects As screen:
             HoverFill: =RGBA(0, 0, 0, 0)
             OnSelect: |-
                 =Set(VarProject, ThisItem);
+                UpdateContext({VarPagamentoProject:false});
+                UpdateContext({varContainerPagamento:false});
+                UpdateContext({varContainerResponsaveisNew:false});
+                UpdateContext({varContainerResponsaveis:false});
                 EditForm(Form1);
                 Navigate('Projects New', ScreenTransition.Fade)
             PressedFill: =RGBA(0, 0, 0, 0)
@@ -175,6 +184,17 @@ Projects As screen:
             X: =4
             Y: =3
             ZIndex: =8
+
+        Label5_5 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =37
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: ="Criado em " &ThisItem.Criado
+            Width: =248
+            X: =9
+            Y: =156
+            ZIndex: =9
 
     Button3_1 As button:
         BorderThickness: =1
