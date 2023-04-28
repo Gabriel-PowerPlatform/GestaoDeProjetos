@@ -129,7 +129,7 @@
             "Name": "Label2_2",
             "Parent": "Menu_Vertical",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 77,
+            "PublishOrderIndex": 165,
             "Rules": [
               {
                 "Category": "Data",
@@ -482,7 +482,7 @@
             "Name": "Fundo_1",
             "Parent": "Menu_Vertical",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 78,
+            "PublishOrderIndex": 166,
             "Rules": [
               {
                 "Category": "Data",
@@ -857,7 +857,7 @@
             "Name": "Icon1",
             "Parent": "Menu_Vertical",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 79,
+            "PublishOrderIndex": 167,
             "Rules": [
               {
                 "Category": "Data",
@@ -1168,7 +1168,7 @@
             "Name": "Rectangle2_9",
             "Parent": "Menu_Vertical",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 80,
+            "PublishOrderIndex": 168,
             "Rules": [
               {
                 "Category": "Data",
@@ -1428,7 +1428,7 @@
             "Name": "Image2",
             "Parent": "Menu_Vertical",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 81,
+            "PublishOrderIndex": 169,
             "Rules": [
               {
                 "Category": "Data",
@@ -1750,7 +1750,7 @@
             "Name": "Label2",
             "Parent": "Menu_Vertical",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 82,
+            "PublishOrderIndex": 170,
             "Rules": [
               {
                 "Category": "Data",
@@ -2123,7 +2123,7 @@
             "Name": "Icon2",
             "Parent": "Menu_Vertical",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 83,
+            "PublishOrderIndex": 171,
             "Rules": [
               {
                 "Category": "Data",
@@ -2433,7 +2433,7 @@
             "Name": "Label2_1",
             "Parent": "Menu_Vertical",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 84,
+            "PublishOrderIndex": 172,
             "Rules": [
               {
                 "Category": "Data",
@@ -2820,7 +2820,7 @@
             "Name": "Icon2_1",
             "Parent": "Menu_Vertical",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 85,
+            "PublishOrderIndex": 173,
             "Rules": [
               {
                 "Category": "Data",
@@ -3111,7 +3111,7 @@
             "Name": "Rectangle2_11",
             "Parent": "Menu_Vertical",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 86,
+            "PublishOrderIndex": 174,
             "Rules": [
               {
                 "Category": "Data",
@@ -3255,7 +3255,7 @@
                 "Name": "galleryTemplate3_9",
                 "Parent": "ListaMenu_4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 88,
+                "PublishOrderIndex": 176,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -3435,7 +3435,7 @@
                 "Name": "Button3_27",
                 "Parent": "ListaMenu_4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 89,
+                "PublishOrderIndex": 177,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -3831,7 +3831,7 @@
                 "Name": "Label2_16",
                 "Parent": "ListaMenu_4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 90,
+                "PublishOrderIndex": 178,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -4321,7 +4321,7 @@
                 "Name": "Button3_28",
                 "Parent": "ListaMenu_4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 91,
+                "PublishOrderIndex": 179,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -4686,7 +4686,7 @@
                 "Name": "Image2_2",
                 "Parent": "ListaMenu_4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 92,
+                "PublishOrderIndex": 180,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -5087,7 +5087,7 @@
                 "Name": "Button3_48",
                 "Parent": "ListaMenu_4",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 93,
+                "PublishOrderIndex": 181,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -5432,7 +5432,7 @@
             "Name": "ListaMenu_4",
             "Parent": "Menu_Vertical",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 87,
+            "PublishOrderIndex": 175,
             "Rules": [
               {
                 "Category": "Data",
@@ -5689,7 +5689,7 @@
         "Name": "Menu_Vertical",
         "Parent": "Menu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 76,
+        "PublishOrderIndex": 164,
         "Rules": [
           {
             "Category": "Design",
@@ -5996,7 +5996,7 @@
         "Name": "Fundo",
         "Parent": "Menu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 94,
+        "PublishOrderIndex": 182,
         "Rules": [
           {
             "Category": "Data",

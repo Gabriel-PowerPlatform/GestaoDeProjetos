@@ -16,6 +16,7 @@ Home As screen:
         DisabledFill: =CorSecundaria
         DisplayMode: =DisplayMode.Disabled
         Fill: =CorSecundaria
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Height: =154*1
         RadiusBottomLeft: =50
         RadiusBottomRight: =50

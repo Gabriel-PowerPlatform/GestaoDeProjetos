@@ -6,6 +6,7 @@ Projects As screen:
         DisabledFill: =CorSecundaria
         DisplayMode: =DisplayMode.Disabled
         Fill: =CorSecundaria
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Height: =154*1
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
@@ -68,6 +69,7 @@ Projects As screen:
             DisabledBorderColor: =RGBA(116, 116, 116, 1)
             DisabledFill: =RGBA(255, 255, 255, 1)
             DisplayMode: =DisplayMode.Disabled
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Height: =190
             OnSelect: =Select(Parent)
             RadiusBottomLeft: =5
@@ -84,7 +86,7 @@ Projects As screen:
             Height: =30
             OnSelect: =Select(Parent)
             Size: =12
-            Text: =ThisItem.'Nome Do Projeto'
+            Text: =ThisItem.'Nome Da Demanda'
             Width: =271
             X: =28
             Y: =7
@@ -94,7 +96,7 @@ Projects As screen:
             Height: =79
             OnSelect: =Select(Parent)
             Size: =12
-            Text: =ThisItem.'Descrição Do Projeto'
+            Text: =ThisItem.'Descrição Da Demanda'
             VerticalAlign: =VerticalAlign.Top
             Width: =248
             X: =28
@@ -143,7 +145,7 @@ Projects As screen:
             OnSelect: =Select(Parent)
             Size: =12
             Text: |-
-                =Text(Value(ThisItem.'Valor Do Projeto'), "R$" & "#.000,00")
+                =Text(Value(ThisItem.Orçamento), "R$" & "#.000,00")
             Width: =248
             X: =9
             Y: =114
@@ -156,6 +158,7 @@ Projects As screen:
             DisabledBorderColor: =RGBA(116, 116, 116, 1)
             DisabledFill: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Height: =190
             HoverFill: =RGBA(0, 0, 0, 0)
             OnSelect: |-
@@ -178,6 +181,7 @@ Projects As screen:
         DisabledBorderColor: =RGBA(116, 116, 116, 1)
         DisabledFill: =RGBA(255, 255, 255, 1)
         DisplayMode: =DisplayMode.Disabled
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Height: =46
         OnSelect: =
         RadiusBottomLeft: =5
@@ -199,7 +203,7 @@ Projects As screen:
         PaddingLeft: =5
         PressedFill: =RGBA(0, 0, 0, 0)
         Size: =12
-        Width: =659
+        Width: =765
         X: =126
         Y: =133
         ZIndex: =10
@@ -213,6 +217,7 @@ Projects As screen:
 
         Button2 As button:
             Fill: =CorPrincipal
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Height: =35
             HoverFill: =ColorFade(CorPrincipal, 0.20)
             OnSelect: |-
@@ -246,6 +251,7 @@ Projects As screen:
             Color: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(0, 0, 0, 0)
             Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Height: =35
             HoverColor: =RGBA(0, 0, 0, 0)
             HoverFill: =RGBA(0,0,0,0)

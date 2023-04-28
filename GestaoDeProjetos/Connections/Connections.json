@@ -16,6 +16,52 @@
     "dependents": [],
     "id": "367880e1-e329-4a52-85f9-bfda9a608fc9"
   },
+  "46ef4547-462d-4419-b6a5-8f81d3c0f4fb": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1627/1.0.1627.3238/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://35z65x.sharepoint.com/sites/GestaoDeProjetos": {
+        "dataSources": {
+          "Backlog": {
+            "tableName": "ddf1f518-0e33-43df-baa9-cbd516fe4a68"
+          },
+          "Documentos": {
+            "tableName": "e1443313-9afc-4356-9186-de30eb6a4bd2"
+          },
+          "Execute": {
+            "tableName": "a49cc966-6881-4e20-a558-26eb275e32f1"
+          },
+          "Pagamento": {
+            "tableName": "bb282bec-a96d-4bca-b7e0-a211eacd3105"
+          },
+          "Recursos": {
+            "tableName": "e9bd8f3f-14e6-4b52-a8f9-9fd423e2c06c"
+          },
+          "Study": {
+            "tableName": "1b81160e-03c1-4cf7-92e9-1d088ba7987e"
+          },
+          "Sustain": {
+            "tableName": "9f47f2c4-32dd-4406-b981-ffc14fede299"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Backlog",
+      "Documentos",
+      "Execute",
+      "Pagamento",
+      "Recursos",
+      "Study",
+      "Sustain"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "46ef4547-462d-4419-b6a5-8f81d3c0f4fb"
+  },
   "a47a018b-ac85-43e8-9c43-27acea55035f": {
     "connectionRef": {
       "apiTier": "Standard",
