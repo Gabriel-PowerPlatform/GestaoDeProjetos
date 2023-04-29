@@ -72,7 +72,7 @@
         "Name": "rectBgLoading",
         "Parent": "cmpShellLoading",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 456,
+        "PublishOrderIndex": 462,
         "Rules": [
           {
             "Category": "Design",
@@ -235,7 +235,7 @@
         "Name": "imgLogoLoading",
         "Parent": "cmpShellLoading",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 457,
+        "PublishOrderIndex": 463,
         "Rules": [
           {
             "Category": "Data",
@@ -483,7 +483,7 @@
         "Name": "Spinner1",
         "Parent": "cmpShellLoading",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 458,
+        "PublishOrderIndex": 464,
         "Rules": [
           {
             "Category": "Data",
@@ -581,7 +581,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638183038135267113",
+    "LastModifiedTimestamp": "638183218579542716",
     "Name": "cmpShellLoading",
     "Rules": [
       {
@@ -640,7 +640,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638183038135267113",
+  "LastModifiedTimestamp": "638183218579542716",
   "Name": "f0732fcdc9f747eab65ecf16f82f7126",
   "OverridableProperties": {},
   "TemplateOriginalName": "1e4161eeb3884f84a91ea0f31eac7635",

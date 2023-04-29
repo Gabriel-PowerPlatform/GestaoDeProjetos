@@ -247,7 +247,7 @@ Home As screen:
     Image11 As image:
         BorderColor: =RGBA(32, 54, 71, 1)
         Height: =30
-        Image: ='envelope_1'
+        Image: =envelope_1
         OnSelect: |-
             =Launch("mailto:gabrielpowerapps@outlook.com")
         Width: =30
