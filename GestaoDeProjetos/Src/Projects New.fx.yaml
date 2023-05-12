@@ -1010,105 +1010,6 @@
                 Y: =5*1
                 ZIndex: =2
 
-        Fase_DataCard1 As typedDataCard.textualEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Fase"
-            Default: =ThisItem.Fase
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Projetos],DataSourceInfo.DisplayName,"Fase")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@Projetos], DataSourceInfo.MaxLength, "Fase")
-            Required: =false
-            Update: =ComboBox1_4.Selected.Value
-            Visible: =Form1.Mode = FormMode.Edit
-            Width: =430
-            X: =2
-            Y: =10
-            ZIndex: =1
-
-            DataCardKey2_8 As label:
-                AutoHeight: =true
-                Color: =RGBA(0, 0, 0, 1)
-                Height: =34*1
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30*1
-                Y: =10*1
-                ZIndex: =1
-
-            ErrorMessage2_8 As label:
-                AutoHeight: =true
-                Height: =10*1
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30*1
-                Y: =89*1
-                ZIndex: =2
-
-            StarVisible2_8 As label:
-                Align: =Align.Center
-                Color: =RGBA(0, 0, 0, 1)
-                Height: =DataCardKey2_8.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30*1
-                Wrap: =false
-                X: =0*1
-                Y: =DataCardKey2_8.Y
-                ZIndex: =3
-
-            Button4_8 As button:
-                BorderThickness: =1
-                DisabledFill: =RGBA(255, 255, 255, 1)
-                DisplayMode: =DisplayMode.Disabled
-                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-                Height: =40*1
-                RadiusBottomLeft: =5
-                RadiusBottomRight: =5
-                RadiusTopLeft: =5
-                RadiusTopRight: =5
-                Text: =""
-                Width: =374*1
-                X: =30*1
-                Y: =48*1
-                ZIndex: =4
-
-            ComboBox1_4 As combobox:
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =0
-                ChevronBackground: =RGBA(255, 255, 255, 1)
-                ChevronFill: =RGBA(47, 129, 101, 1)
-                ChevronHoverBackground: =RGBA(0, 0, 0, 0)
-                ChevronHoverFill: =RGBA(47, 129, 101, 1)
-                DefaultSelectedItems: |-
-                    ={Value:Parent.Default}
-                DisplayFields: =["Value"]
-                FocusedBorderThickness: =0
-                Height: =36*1
-                HoverBorderColor: =
-                HoverFill: =RGBA(255, 255, 255, 1)
-                IsSearchable: =false
-                Items: =["Capture", "Backlog", "Study", "Execute", "Sustain"]
-                NoSelectionText: ="Insira a " & Parent.DisplayName
-                PressedFill: =RGBA(0, 0, 0, 0)
-                SearchFields: =["Value"]
-                SearchItems: =[]
-                SelectionFill: =RGBA(47, 129, 101, 1)
-                SelectMultiple: =false
-                Size: =11
-                Width: =370*1
-                X: =32*1
-                Y: =50*1
-                ZIndex: =5
-
         "'Status Demanda_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="StatusDemanda"
@@ -1196,6 +1097,105 @@
                 HoverFill: =RGBA(255, 255, 255, 1)
                 IsSearchable: =false
                 Items: =["New", "Prioritized", "Deprioritized", "Planned", "On Hold"]
+                NoSelectionText: ="Insira a " & Parent.DisplayName
+                PressedFill: =RGBA(0, 0, 0, 0)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectionFill: =RGBA(47, 129, 101, 1)
+                SelectMultiple: =false
+                Size: =11
+                Width: =370*1
+                X: =32*1
+                Y: =50*1
+                ZIndex: =5
+
+        Fase_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Fase"
+            Default: =ThisItem.Fase
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Projetos],DataSourceInfo.DisplayName,"Fase")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Projetos], DataSourceInfo.MaxLength, "Fase")
+            Required: =false
+            Update: =ComboBox1_4.Selected.Value
+            Visible: =Form1.Mode = FormMode.Edit
+            Width: =430
+            X: =2
+            Y: =10
+            ZIndex: =1
+
+            DataCardKey2_8 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Height: =34*1
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30*1
+                Y: =10*1
+                ZIndex: =1
+
+            ErrorMessage2_8 As label:
+                AutoHeight: =true
+                Height: =10*1
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30*1
+                Y: =89*1
+                ZIndex: =2
+
+            StarVisible2_8 As label:
+                Align: =Align.Center
+                Color: =RGBA(0, 0, 0, 1)
+                Height: =DataCardKey2_8.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30*1
+                Wrap: =false
+                X: =0*1
+                Y: =DataCardKey2_8.Y
+                ZIndex: =3
+
+            Button4_8 As button:
+                BorderThickness: =1
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Height: =40*1
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Text: =""
+                Width: =374*1
+                X: =30*1
+                Y: =48*1
+                ZIndex: =4
+
+            ComboBox1_4 As combobox:
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =0
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =RGBA(47, 129, 101, 1)
+                ChevronHoverBackground: =RGBA(0, 0, 0, 0)
+                ChevronHoverFill: =RGBA(47, 129, 101, 1)
+                DefaultSelectedItems: |-
+                    ={Value:Parent.Default}
+                DisplayFields: =["Value"]
+                FocusedBorderThickness: =0
+                Height: =36*1
+                HoverBorderColor: =
+                HoverFill: =RGBA(255, 255, 255, 1)
+                IsSearchable: =false
+                Items: =["Capture", "Backlog", "Study", "Execute", "Sustain"]
                 NoSelectionText: ="Insira a " & Parent.DisplayName
                 PressedFill: =RGBA(0, 0, 0, 0)
                 SearchFields: =["Value"]
@@ -4029,7 +4029,7 @@
                 FontWeight: =FontWeight.Bold
                 Height: =32
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.Recurso.DisplayName
+                Text: =ThisItem.Recurso.DisplayName & " - " & ThisItem.Função
                 Width: =600
                 X: =95
                 Y: =35
@@ -4044,18 +4044,6 @@
                 Text: =""
                 Width: =1294
                 ZIndex: =28
-
-            Image8_2 As image:
-                Height: =25
-                Image: =lapis
-                OnSelect: |-
-                    =Set(VarResponsaveisProject, ThisItem);
-                    EditForm(Form2_1);
-                    UpdateContext({varContainerResponsaveisNew:true})
-                Width: =25
-                X: =1199
-                Y: =55
-                ZIndex: =29
 
             Image8_3 As image:
                 Height: =25
@@ -4228,10 +4216,109 @@
         Form2_1 As form:
             DataSource: =Recursos
             Height: =557
+            SnapToColumns: =false
             Width: =1314
             X: =22
             Y: =92
             ZIndex: =5
+
+            Função_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Funcao"
+                Default: =ThisItem.Função
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@Recursos],DataSourceInfo.DisplayName,"Funcao")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@Recursos], DataSourceInfo.MaxLength, "Funcao")
+                Required: =false
+                Update: =DataCardValue28_4.Selected.Value
+                Width: =438
+                X: =3
+                Y: =0
+                ZIndex: =1
+
+                DataCardKey2_39 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =34*1
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30*1
+                    Y: =10*1
+                    ZIndex: =1
+
+                ErrorMessage2_39 As label:
+                    AutoHeight: =true
+                    Height: =10*1
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30*1
+                    Y: =89*1
+                    ZIndex: =2
+
+                StarVisible2_39 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =DataCardKey2_39.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30*1
+                    Wrap: =false
+                    X: =0*1
+                    Y: =DataCardKey2_39.Y
+                    ZIndex: =3
+
+                Button4_39 As button:
+                    BorderThickness: =1
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    Height: =40*1
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Text: =""
+                    Width: =374*1
+                    X: =30*1
+                    Y: =48*1
+                    ZIndex: =4
+
+                DataCardValue28_4 As combobox:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =0
+                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                    ChevronFill: =RGBA(47, 129, 101, 1)
+                    ChevronHoverBackground: =RGBA(0, 0, 0, 0)
+                    ChevronHoverFill: =RGBA(47, 129, 101, 1)
+                    DefaultSelectedItems: |-
+                        ={Value:Parent.Default}
+                    DisplayFields: =["DisplayName","Email","Picture"]
+                    FocusedBorderThickness: =0
+                    Height: =36*1
+                    HoverBorderColor: =
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    IsSearchable: =false
+                    Items: =["PMO", "LT", "Arquiteto","DEV","GP"]
+                    NoSelectionText: ="Insira a " & Parent.DisplayName
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    SearchFields: =["Value"]
+                    SearchItems: =[]
+                    SelectionFill: =RGBA(47, 129, 101, 1)
+                    SelectMultiple: =false
+                    Size: =11
+                    Width: =370*1
+                    X: =32*1
+                    Y: =50*1
+                    ZIndex: =5
 
             DataCard11 As typedDataCard.blankCard:
                 BorderStyle: =BorderStyle.Solid
@@ -4240,7 +4327,7 @@
                 Height: =457
                 Width: =Parent.Width
                 X: =0
-                Y: =1
+                Y: =2
                 ZIndex: =1
 
                 Button2_8 As button:
@@ -4573,15 +4660,16 @@
 
         "Gallery3_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
             DelayItemLoading: =true
-            Height: =99
+            Height: =479
             Items: =Filter(Backlog, idProjeto = VarProject.ID)
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
             TemplateSize: =99
+            Visible: =Gallery3_6.Selected.nome = "Backlog"
             Width: =1306
             X: =30
-            Y: =142
+            Y: =155
             ZIndex: =5
 
             Label6_27 As label:
@@ -4609,9 +4697,10 @@
                 Height: =25
                 Image: =lapis
                 OnSelect: |-
-                    =Set(VarResponsaveisProject, ThisItem);
-                    EditForm(Form2_1);
-                    UpdateContext({varContainerResponsaveisNew:true})
+                    =Set(VarFaseProject, ThisItem);
+                    ResetForm(Form2_2);
+                    EditForm(Form2_2);
+                    UpdateContext({varContainerFasesBacklog:true})
                 Width: =25
                 X: =1199
                 Y: =35
@@ -4639,34 +4728,19 @@
                 Y: =39
                 ZIndex: =31
 
-        Title1_12 As label:
-            Color: =CorPrincipal
-            Height: =28
-            OnSelect: =
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =14
-            Text: ="Backlog"
-            VerticalAlign: =VerticalAlign.Top
-            Width: =700*1
-            X: =31
-            Y: =114
-            ZIndex: =6
-
         "Gallery3_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
             DelayItemLoading: =true
-            Height: =99
+            Height: =479
             Items: =Filter(Study, idProjeto = VarProject.ID)
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
             TemplatePadding: =0
             TemplateSize: =99
+            Visible: =Gallery3_6.Selected.nome = "Study"
             Width: =1306
             X: =30
-            Y: =272
+            Y: =155
             ZIndex: =7
 
             Label6_29 As label:
@@ -4694,9 +4768,9 @@
                 Height: =25
                 Image: =lapis
                 OnSelect: |-
-                    =Set(VarResponsaveisProject, ThisItem);
+                    =Set(VarFaseStudy, ThisItem);
                     EditForm(Form2_1);
-                    UpdateContext({varContainerResponsaveisNew:true})
+                    UpdateContext({varContainerFasesStudy:true})
                 Width: =25
                 X: =1199
                 Y: =35
@@ -4724,34 +4798,19 @@
                 Y: =39
                 ZIndex: =31
 
-        Title1_13 As label:
-            Color: =CorPrincipal
-            Height: =28
-            OnSelect: =
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =14
-            Text: ="Study"
-            VerticalAlign: =VerticalAlign.Top
-            Width: =700*1
-            X: =31
-            Y: =244
-            ZIndex: =8
-
         "Gallery3_4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
             DelayItemLoading: =true
-            Height: =99
+            Height: =479
             Items: =Filter(Execute, idProjeto = VarProject.ID)
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
             TemplatePadding: =0
             TemplateSize: =99
+            Visible: =Gallery3_6.Selected.nome = "Execute"
             Width: =1306
             X: =30
-            Y: =402
+            Y: =155
             ZIndex: =9
 
             Label6_31 As label:
@@ -4779,9 +4838,9 @@
                 Height: =25
                 Image: =lapis
                 OnSelect: |-
-                    =Set(VarResponsaveisProject, ThisItem);
-                    EditForm(Form2_1);
-                    UpdateContext({varContainerResponsaveisNew:true})
+                    =Set(VarFaseExecute, ThisItem);
+                    EditForm(Form2_4);
+                    UpdateContext({varContainerFasesExecute:true})
                 Width: =25
                 X: =1199
                 Y: =35
@@ -4809,34 +4868,19 @@
                 Y: =39
                 ZIndex: =31
 
-        Title1_14 As label:
-            Color: =CorPrincipal
-            Height: =28
-            OnSelect: =
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =14
-            Text: ="Execute"
-            VerticalAlign: =VerticalAlign.Top
-            Width: =700*1
-            X: =31
-            Y: =374
-            ZIndex: =10
-
         "Gallery3_5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
             DelayItemLoading: =true
-            Height: =99
+            Height: =479
             Items: =Filter(Sustain, idProjeto = VarProject.ID)
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
             TemplatePadding: =0
             TemplateSize: =99
+            Visible: =Gallery3_6.Selected.nome = "Sustain"
             Width: =1306
             X: =31
-            Y: =536
+            Y: =155
             ZIndex: =11
 
             Label6_33 As label:
@@ -4864,9 +4908,9 @@
                 Height: =25
                 Image: =lapis
                 OnSelect: |-
-                    =Set(VarResponsaveisProject, ThisItem);
-                    EditForm(Form2_1);
-                    UpdateContext({varContainerResponsaveisNew:true})
+                    =Set(VarFaseSustain, ThisItem);
+                    EditForm(Form2_5);
+                    UpdateContext({varContainerFasesSustain:true})
                 Width: =25
                 X: =1199
                 Y: =35
@@ -4894,23 +4938,1267 @@
                 Y: =39
                 ZIndex: =31
 
-        Title1_15 As label:
+        "Gallery3_6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            Default: |-
+                ={nome: "Backlog"}
+            DelayItemLoading: =true
+            Height: =58
+            Items: |-
+                =Table({nome: "Backlog"},{nome: "Study"},{nome: "Execute"},{nome: "Sustain"})
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =49
+            Width: =505
+            WrapCount: =5
+            X: =32
+            Y: =85
+            ZIndex: =13
+
+            Button5_6 As button:
+                DisabledBorderColor: =RGBA(237, 237, 237, 1)
+                DisabledFill: =CorPrincipal
+                DisplayMode: =DisplayMode.Disabled
+                Height: =6
+                OnSelect: =Select(Parent)
+                Text: =""
+                Visible: =ThisItem.IsSelected
+                Width: =80
+                X: =6
+                Y: =37
+                ZIndex: =28
+
+            Label7 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Height: =25
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.nome
+                Width: =80
+                X: =6
+                Y: =9
+                ZIndex: =29
+
+            Button5_7 As button:
+                BorderStyle: =BorderStyle.None
+                DisabledBorderColor: =RGBA(237, 237, 237, 1)
+                DisabledFill: =
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =37
+                HoverFill: =
+                OnSelect: =Select(Parent)
+                PressedFill: =
+                Text: =""
+                Width: =95
+                X: =6
+                Y: =9
+                ZIndex: =30
+
+    "'Fases Backlog' As groupContainer.manualLayoutContainer":
+        Height: =674
+        Visible: =varContainerFasesBacklog
+        Width: =1366
+        Y: =94
+        ZIndex: =12
+
+        cmpShadowBox_15 As cmpShadowBox:
+            Box: |-
+                ={Fill: "#FFFFFF", Opacity: 1, BorderThickness: 0, BorderColor: "#000000", Radius: 10}
+            Edge: |-
+                ={Position: Self.EdgePositionEnum.Top, Width: 8, Color: "#2F8165", Padding: 0}
+            Height: =Parent.Height
+            Width: =Parent.Width
+            ZIndex: =1
+
+        Icon3_7 As icon.CancelBadge:
             Color: =CorPrincipal
-            Height: =28
+            Height: =25
+            HoverColor: =ColorFade(CorPrincipal, 20%)
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =UpdateContext({varContainerFasesBacklog:false})
+            Width: =25
+            X: =1311
+            Y: =35
+            ZIndex: =2
+
+        Separator1_12 As rectangle:
+            DisabledFill: =CorPrincipal
+            DisplayMode: =DisplayMode.Disabled
+            Height: =1*1
+            OnSelect: =
+            Width: =1290*1
+            X: =30
+            Y: =80
+            ZIndex: =3
+
+        Title1_12 As label:
+            Color: =CorPrincipal
+            Height: =36*1
             OnSelect: =
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Size: =14
-            Text: ="Sustain"
+            Text: ="Editar Backlog"
             VerticalAlign: =VerticalAlign.Top
             Width: =700*1
-            X: =32
-            Y: =508
-            ZIndex: =12
+            X: =31
+            Y: =35
+            ZIndex: =4
+
+        Form2_2 As form:
+            DataSource: =Backlog
+            Height: =557
+            Item: =VarFaseProject
+            Width: =1314
+            X: =22
+            Y: =92
+            ZIndex: =5
+
+            Descrição_DataCard1 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Descricao"
+                Default: =ThisItem.Descrição
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@Backlog],DataSourceInfo.DisplayName,"Descricao")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =281
+                MaxLength: =DataSourceInfo([@Backlog], DataSourceInfo.MaxLength, "Descricao")
+                Required: =false
+                Update: =DataCardValue30.Text
+                Width: =Parent.Width
+                X: =0
+                Y: =1
+                ZIndex: =1
+
+                DataCardKey2_32 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =34*1
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30*1
+                    Y: =10*1
+                    ZIndex: =1
+
+                ErrorMessage2_32 As label:
+                    AutoHeight: =true
+                    Height: =10*1
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30*1
+                    Y: =DataCardValue30.Y + DataCardValue30.Height
+                    ZIndex: =2
+
+                StarVisible2_32 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =DataCardKey2_32.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30*1
+                    Wrap: =false
+                    X: =0*1
+                    Y: =DataCardKey2_32.Y
+                    ZIndex: =3
+
+                Button4_32 As button:
+                    BorderThickness: =1
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    Height: =205*1
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Text: =""
+                    Width: =1254*1
+                    X: =30*1
+                    Y: =48*1
+                    ZIndex: =4
+
+                DataCardValue30 As text:
+                    BorderStyle: =BorderStyle.None
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =205*1
+                    HintText: ="Insira a descrição"
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Mode: =TextMode.MultiLine
+                    PaddingLeft: =5
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Size: =11
+                    Tooltip: =Parent.DisplayName
+                    Width: =1254*1
+                    X: =30*1
+                    Y: =DataCardKey2_32.Y + DataCardKey2_32.Height + 5
+                    ZIndex: =5
+
+            DataCard9 As typedDataCard.blankCard:
+                BorderStyle: =BorderStyle.Solid
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =170
+                Width: =Parent.Width
+                X: =0
+                Y: =2
+                ZIndex: =1
+
+                Button2_11 As button:
+                    BorderThickness: =1
+                    Fill: =CorPrincipal
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    FocusedBorderThickness: =1
+                    Height: =35*1
+                    HoverFill: =ColorFade(CorPrincipal, 0.20)
+                    OnSelect: |-
+                        =UpdateContext({VarLoading:true});
+                        SubmitForm(Form2_2);
+                        Notify("Fase editada com sucesso",NotificationType.Success);
+                        UpdateContext({VarLoading:false});
+                        UpdateContext({varContainerFasesBacklog:false})
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =CorPrincipal
+                    Size: =12
+                    Text: ="Salvar"
+                    Width: =95*1
+                    X: =1199*1
+                    Y: =117*1
+                    ZIndex: =1
+
+                Button2_12 As button:
+                    BorderThickness: =1
+                    Color: =RGBA(116, 116, 116, 1)
+                    Fill: =CorFundo
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    FocusedBorderThickness: =1
+                    Height: =35*1
+                    HoverColor: =RGBA(116, 116, 116, 1)
+                    HoverFill: =ColorFade(CorFundo, 0.20)
+                    OnSelect: |-
+                        =UpdateContext({varContainerFasesBacklog:false})
+                    PressedColor: =RGBA(116, 116, 116, 1)
+                    PressedFill: =CorFundo
+                    Size: =12
+                    Text: ="Cancelar"
+                    Width: =129*1
+                    X: =1052*1
+                    Y: =117*1
+                    ZIndex: =2
+
+            "'Fase Status_DataCard1' As typedDataCard.textualEditCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Opcao"
+                Default: =ThisItem.'Fase Status'
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@Backlog],DataSourceInfo.DisplayName,"Opcao")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@Backlog], DataSourceInfo.MaxLength, "Opcao")
+                Required: =false
+                Update: =DataCardValue28.Selected.Value
+                Width: =438
+                X: =0
+                Y: =0
+                ZIndex: =6
+
+                DataCardKey2_31 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =34*1
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30*1
+                    Y: =10*1
+                    ZIndex: =3
+
+                ErrorMessage2_31 As label:
+                    AutoHeight: =true
+                    Height: =10*1
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30*1
+                    Y: =89*1
+                    ZIndex: =4
+
+                StarVisible2_31 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =DataCardKey2_31.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30*1
+                    Wrap: =false
+                    X: =0*1
+                    Y: =DataCardKey2_31.Y
+                    ZIndex: =5
+
+                Button4_31 As button:
+                    BorderThickness: =1
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    Height: =40*1
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Text: =""
+                    Width: =374*1
+                    X: =30*1
+                    Y: =48*1
+                    ZIndex: =6
+
+                DataCardValue28 As combobox:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =0
+                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                    ChevronFill: =RGBA(47, 129, 101, 1)
+                    ChevronHoverBackground: =RGBA(0, 0, 0, 0)
+                    ChevronHoverFill: =RGBA(47, 129, 101, 1)
+                    DefaultSelectedItems: |-
+                        ={Value:Parent.Default}
+                    DisplayFields: =["DisplayName","Email","Picture"]
+                    FocusedBorderThickness: =0
+                    Height: =36*1
+                    HoverBorderColor: =
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    IsSearchable: =false
+                    Items: =["In Progress", "Completed", "Canceled"]
+                    NoSelectionText: ="Insira a " & Parent.DisplayName
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    SearchFields: =["Value"]
+                    SearchItems: =[]
+                    SelectionFill: =RGBA(47, 129, 101, 1)
+                    SelectMultiple: =false
+                    Size: =11
+                    Width: =370*1
+                    X: =32*1
+                    Y: =50*1
+                    ZIndex: =7
+
+    "'Fases Study' As groupContainer.manualLayoutContainer":
+        Height: =674
+        Visible: =varContainerFasesStudy
+        Width: =1366
+        Y: =94
+        ZIndex: =13
+
+        cmpShadowBox_16 As cmpShadowBox:
+            Box: |-
+                ={Fill: "#FFFFFF", Opacity: 1, BorderThickness: 0, BorderColor: "#000000", Radius: 10}
+            Edge: |-
+                ={Position: Self.EdgePositionEnum.Top, Width: 8, Color: "#2F8165", Padding: 0}
+            Height: =674
+            Width: =1366
+            ZIndex: =1
+
+        Icon3_8 As icon.CancelBadge:
+            Color: =CorPrincipal
+            Height: =25
+            HoverColor: =ColorFade(CorPrincipal, 20%)
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =UpdateContext({varContainerFasesStudy:false})
+            Width: =25
+            X: =1311
+            Y: =35
+            ZIndex: =2
+
+        Separator1_13 As rectangle:
+            DisabledFill: =CorPrincipal
+            DisplayMode: =DisplayMode.Disabled
+            Height: =1*1
+            OnSelect: =
+            Width: =1290*1
+            X: =30
+            Y: =80
+            ZIndex: =3
+
+        Title1_13 As label:
+            Color: =CorPrincipal
+            Height: =36*1
+            OnSelect: =
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: ="Editar Study"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =700*1
+            X: =31
+            Y: =35
+            ZIndex: =4
+
+        Form2_3 As form:
+            DataSource: =Study
+            Height: =557
+            Item: =VarFaseStudy
+            Width: =1314
+            X: =22
+            Y: =92
+            ZIndex: =5
+
+            Descrição_DataCard2 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Descricao"
+                Default: =ThisItem.Descrição
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@Study],DataSourceInfo.DisplayName,"Descricao")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =281
+                MaxLength: =DataSourceInfo([@Study], DataSourceInfo.MaxLength, "Descricao")
+                Required: =false
+                Update: =DataCardValue36.Text
+                Width: =Parent.Width
+                X: =1
+                Y: =0
+                ZIndex: =1
+
+                DataCardKey2_33 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =34*1
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30*1
+                    Y: =10*1
+                    ZIndex: =1
+
+                ErrorMessage2_33 As label:
+                    AutoHeight: =true
+                    Height: =10*1
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30*1
+                    Y: =DataCardValue36.Y + DataCardValue36.Height
+                    ZIndex: =2
+
+                StarVisible2_33 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =DataCardKey2_33.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30*1
+                    Wrap: =false
+                    X: =0*1
+                    Y: =DataCardKey2_33.Y
+                    ZIndex: =3
+
+                Button4_33 As button:
+                    BorderThickness: =1
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    Height: =205*1
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Text: =""
+                    Width: =1254*1
+                    X: =30*1
+                    Y: =48*1
+                    ZIndex: =4
+
+                DataCardValue36 As text:
+                    BorderStyle: =BorderStyle.None
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =205*1
+                    HintText: ="Insira a descrição"
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Mode: =TextMode.MultiLine
+                    PaddingLeft: =5
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Size: =11
+                    Tooltip: =Parent.DisplayName
+                    Width: =1254*1
+                    X: =30*1
+                    Y: =DataCardKey2_33.Y + DataCardKey2_33.Height + 5
+                    ZIndex: =5
+
+            DataCard12 As typedDataCard.blankCard:
+                BorderStyle: =BorderStyle.Solid
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =170
+                Width: =Parent.Width
+                X: =2
+                Y: =0
+                ZIndex: =1
+
+                Button2_13 As button:
+                    BorderThickness: =1
+                    Fill: =CorPrincipal
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    FocusedBorderThickness: =1
+                    Height: =35*1
+                    HoverFill: =ColorFade(CorPrincipal, 0.20)
+                    OnSelect: |-
+                        =UpdateContext({VarLoading:true});
+                        SubmitForm(Form2_3);
+                        Notify("Fase editada com sucesso",NotificationType.Success);
+                        UpdateContext({VarLoading:false});
+                        UpdateContext({varContainerFasesStudy:false})
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =CorPrincipal
+                    Size: =12
+                    Text: ="Salvar"
+                    Width: =95*1
+                    X: =1199*1
+                    Y: =117*1
+                    ZIndex: =1
+
+                Button2_14 As button:
+                    BorderThickness: =1
+                    Color: =RGBA(116, 116, 116, 1)
+                    Fill: =CorFundo
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    FocusedBorderThickness: =1
+                    Height: =35*1
+                    HoverColor: =RGBA(116, 116, 116, 1)
+                    HoverFill: =ColorFade(CorFundo, 0.20)
+                    OnSelect: |-
+                        =UpdateContext({varContainerFasesStudy:false})
+                    PressedColor: =RGBA(116, 116, 116, 1)
+                    PressedFill: =CorFundo
+                    Size: =12
+                    Text: ="Cancelar"
+                    Width: =129*1
+                    X: =1052*1
+                    Y: =117*1
+                    ZIndex: =2
+
+            "'Fase Status_DataCard2' As typedDataCard.textualEditCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Opcao"
+                Default: =ThisItem.'Fase Status'
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@Study],DataSourceInfo.DisplayName,"Opcao")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@Study], DataSourceInfo.MaxLength, "Opcao")
+                Required: =false
+                Update: =DataCardValue28_1.Selected.Value
+                Width: =438
+                X: =0
+                Y: =0
+                ZIndex: =6
+
+                DataCardKey2_34 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =34*1
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30*1
+                    Y: =10*1
+                    ZIndex: =1
+
+                ErrorMessage2_34 As label:
+                    AutoHeight: =true
+                    Height: =10*1
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30*1
+                    Y: =89*1
+                    ZIndex: =2
+
+                StarVisible2_34 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =DataCardKey2_34.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30*1
+                    Wrap: =false
+                    X: =0*1
+                    Y: =DataCardKey2_34.Y
+                    ZIndex: =3
+
+                Button4_34 As button:
+                    BorderThickness: =1
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    Height: =40*1
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Text: =""
+                    Width: =374*1
+                    X: =30*1
+                    Y: =48*1
+                    ZIndex: =4
+
+                DataCardValue28_1 As combobox:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =0
+                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                    ChevronFill: =RGBA(47, 129, 101, 1)
+                    ChevronHoverBackground: =RGBA(0, 0, 0, 0)
+                    ChevronHoverFill: =RGBA(47, 129, 101, 1)
+                    DefaultSelectedItems: |-
+                        ={Value:Parent.Default}
+                    DisplayFields: =["DisplayName","Email","Picture"]
+                    FocusedBorderThickness: =0
+                    Height: =36*1
+                    HoverBorderColor: =
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    IsSearchable: =false
+                    Items: =["In Progress", "Completed", "Canceled"]
+                    NoSelectionText: ="Insira a " & Parent.DisplayName
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    SearchFields: =["Value"]
+                    SearchItems: =[]
+                    SelectionFill: =RGBA(47, 129, 101, 1)
+                    SelectMultiple: =false
+                    Size: =11
+                    Width: =370*1
+                    X: =32*1
+                    Y: =50*1
+                    ZIndex: =5
+
+    "'Fases Execute' As groupContainer.manualLayoutContainer":
+        Height: =674
+        Visible: =varContainerFasesExecute
+        Width: =1366
+        Y: =94
+        ZIndex: =14
+
+        cmpShadowBox_17 As cmpShadowBox:
+            Box: |-
+                ={Fill: "#FFFFFF", Opacity: 1, BorderThickness: 0, BorderColor: "#000000", Radius: 10}
+            Edge: |-
+                ={Position: Self.EdgePositionEnum.Top, Width: 8, Color: "#2F8165", Padding: 0}
+            Height: =674
+            Width: =1366
+            ZIndex: =1
+
+        Icon3_9 As icon.CancelBadge:
+            Color: =CorPrincipal
+            Height: =25
+            HoverColor: =ColorFade(CorPrincipal, 20%)
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =UpdateContext({varContainerFasesExecute:false})
+            Width: =25
+            X: =1311
+            Y: =35
+            ZIndex: =2
+
+        Separator1_14 As rectangle:
+            DisabledFill: =CorPrincipal
+            DisplayMode: =DisplayMode.Disabled
+            Height: =1*1
+            OnSelect: =
+            Width: =1290*1
+            X: =30
+            Y: =80
+            ZIndex: =3
+
+        Title1_14 As label:
+            Color: =CorPrincipal
+            Height: =36*1
+            OnSelect: =
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: ="Editar Execute"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =700*1
+            X: =31
+            Y: =35
+            ZIndex: =4
+
+        Form2_4 As form:
+            DataSource: =Execute
+            Height: =557
+            Item: =VarFaseExecute
+            Width: =1314
+            X: =22
+            Y: =92
+            ZIndex: =5
+
+            DataCard13 As typedDataCard.blankCard:
+                BorderStyle: =BorderStyle.Solid
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =170
+                Width: =Parent.Width
+                X: =2
+                Y: =0
+                ZIndex: =1
+
+                Button2_15 As button:
+                    BorderThickness: =1
+                    Fill: =CorPrincipal
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    FocusedBorderThickness: =1
+                    Height: =35*1
+                    HoverFill: =ColorFade(CorPrincipal, 0.20)
+                    OnSelect: |-
+                        =UpdateContext({VarLoading:true});
+                        SubmitForm(Form2_4);
+                        Notify("Fase editada com sucesso",NotificationType.Success);
+                        UpdateContext({VarLoading:false});
+                        UpdateContext({varContainerFasesExecute:false})
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =CorPrincipal
+                    Size: =12
+                    Text: ="Salvar"
+                    Width: =95*1
+                    X: =1199*1
+                    Y: =117*1
+                    ZIndex: =1
+
+                Button2_16 As button:
+                    BorderThickness: =1
+                    Color: =RGBA(116, 116, 116, 1)
+                    Fill: =CorFundo
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    FocusedBorderThickness: =1
+                    Height: =35*1
+                    HoverColor: =RGBA(116, 116, 116, 1)
+                    HoverFill: =ColorFade(CorFundo, 0.20)
+                    OnSelect: |-
+                        =UpdateContext({varContainerFasesExecute:false})
+                    PressedColor: =RGBA(116, 116, 116, 1)
+                    PressedFill: =CorFundo
+                    Size: =12
+                    Text: ="Cancelar"
+                    Width: =129*1
+                    X: =1052*1
+                    Y: =117*1
+                    ZIndex: =2
+
+            "'Fase Status_DataCard3' As typedDataCard.textualEditCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Opcao"
+                Default: =ThisItem.'Fase Status'
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@Execute],DataSourceInfo.DisplayName,"Opcao")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@Execute], DataSourceInfo.MaxLength, "Opcao")
+                Required: =false
+                Update: =DataCardValue28_2.Selected.Value
+                Width: =438
+                X: =0
+                Y: =0
+                ZIndex: =6
+
+                DataCardKey2_36 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =34*1
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30*1
+                    Y: =10*1
+                    ZIndex: =1
+
+                ErrorMessage2_36 As label:
+                    AutoHeight: =true
+                    Height: =10*1
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30*1
+                    Y: =89*1
+                    ZIndex: =2
+
+                StarVisible2_36 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =DataCardKey2_36.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30*1
+                    Wrap: =false
+                    X: =0*1
+                    Y: =DataCardKey2_36.Y
+                    ZIndex: =3
+
+                Button4_36 As button:
+                    BorderThickness: =1
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    Height: =40*1
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Text: =""
+                    Width: =374*1
+                    X: =30*1
+                    Y: =48*1
+                    ZIndex: =4
+
+                DataCardValue28_2 As combobox:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =0
+                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                    ChevronFill: =RGBA(47, 129, 101, 1)
+                    ChevronHoverBackground: =RGBA(0, 0, 0, 0)
+                    ChevronHoverFill: =RGBA(47, 129, 101, 1)
+                    DefaultSelectedItems: |-
+                        ={Value:Parent.Default}
+                    DisplayFields: =["DisplayName","Email","Picture"]
+                    FocusedBorderThickness: =0
+                    Height: =36*1
+                    HoverBorderColor: =
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    IsSearchable: =false
+                    Items: =["In Progress", "Completed", "Canceled"]
+                    NoSelectionText: ="Insira a " & Parent.DisplayName
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    SearchFields: =["Value"]
+                    SearchItems: =[]
+                    SelectionFill: =RGBA(47, 129, 101, 1)
+                    SelectMultiple: =false
+                    Size: =11
+                    Width: =370*1
+                    X: =32*1
+                    Y: =50*1
+                    ZIndex: =5
+
+            Descrição_DataCard3 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Descricao"
+                Default: =ThisItem.Descrição
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@Execute],DataSourceInfo.DisplayName,"Descricao")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =281
+                MaxLength: =DataSourceInfo([@Execute], DataSourceInfo.MaxLength, "Descricao")
+                Required: =false
+                Update: =DataCardValue41.Text
+                Width: =Parent.Width
+                X: =1
+                Y: =0
+                ZIndex: =6
+
+                DataCardKey2_35 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =34*1
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30*1
+                    Y: =10*1
+                    ZIndex: =1
+
+                ErrorMessage2_35 As label:
+                    AutoHeight: =true
+                    Height: =10*1
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30*1
+                    Y: =DataCardValue41.Y + DataCardValue41.Height
+                    ZIndex: =2
+
+                StarVisible2_35 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =DataCardKey2_35.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30*1
+                    Wrap: =false
+                    X: =0*1
+                    Y: =DataCardKey2_35.Y
+                    ZIndex: =3
+
+                Button4_35 As button:
+                    BorderThickness: =1
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    Height: =205*1
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Text: =""
+                    Width: =1254*1
+                    X: =30*1
+                    Y: =48*1
+                    ZIndex: =4
+
+                DataCardValue41 As text:
+                    BorderStyle: =BorderStyle.None
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =205*1
+                    HintText: ="Insira a descrição"
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Mode: =TextMode.MultiLine
+                    PaddingLeft: =5
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Size: =11
+                    Tooltip: =Parent.DisplayName
+                    Width: =1254*1
+                    X: =30*1
+                    Y: =DataCardKey2_35.Y + DataCardKey2_35.Height + 5
+                    ZIndex: =5
+
+    "'Fases Sustain' As groupContainer.manualLayoutContainer":
+        Height: =674
+        Visible: =varContainerFasesSustain
+        Width: =1366
+        Y: =94
+        ZIndex: =15
+
+        cmpShadowBox_18 As cmpShadowBox:
+            Box: |-
+                ={Fill: "#FFFFFF", Opacity: 1, BorderThickness: 0, BorderColor: "#000000", Radius: 10}
+            Edge: |-
+                ={Position: Self.EdgePositionEnum.Top, Width: 8, Color: "#2F8165", Padding: 0}
+            Height: =674
+            Width: =1366
+            ZIndex: =1
+
+        Icon3_10 As icon.CancelBadge:
+            Color: =CorPrincipal
+            Height: =25
+            HoverColor: =ColorFade(CorPrincipal, 20%)
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =UpdateContext({varContainerFasesSustain:false})
+            Width: =25
+            X: =1311
+            Y: =35
+            ZIndex: =2
+
+        Separator1_15 As rectangle:
+            DisabledFill: =CorPrincipal
+            DisplayMode: =DisplayMode.Disabled
+            Height: =1*1
+            OnSelect: =
+            Width: =1290*1
+            X: =30
+            Y: =80
+            ZIndex: =3
+
+        Title1_15 As label:
+            Color: =CorPrincipal
+            Height: =36*1
+            OnSelect: =
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: ="Editar Sustain"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =700*1
+            X: =31
+            Y: =35
+            ZIndex: =4
+
+        Form2_5 As form:
+            DataSource: =Sustain
+            Height: =557
+            Item: =VarFaseSustain
+            Width: =1314
+            X: =22
+            Y: =92
+            ZIndex: =5
+
+            DataCard14 As typedDataCard.blankCard:
+                BorderStyle: =BorderStyle.Solid
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =170
+                Width: =Parent.Width
+                X: =2
+                Y: =0
+                ZIndex: =1
+
+                Button2_17 As button:
+                    BorderThickness: =1
+                    Fill: =CorPrincipal
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    FocusedBorderThickness: =1
+                    Height: =35*1
+                    HoverFill: =ColorFade(CorPrincipal, 0.20)
+                    OnSelect: |-
+                        =UpdateContext({VarLoading:true});
+                        SubmitForm(Form2_5);
+                        Notify("Fase editada com sucesso",NotificationType.Success);
+                        UpdateContext({VarLoading:false});
+                        UpdateContext({varContainerFasesSustain:false})
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =CorPrincipal
+                    Size: =12
+                    Text: ="Salvar"
+                    Width: =95*1
+                    X: =1199*1
+                    Y: =117*1
+                    ZIndex: =1
+
+                Button2_18 As button:
+                    BorderThickness: =1
+                    Color: =RGBA(116, 116, 116, 1)
+                    Fill: =CorFundo
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    FocusedBorderThickness: =1
+                    Height: =35*1
+                    HoverColor: =RGBA(116, 116, 116, 1)
+                    HoverFill: =ColorFade(CorFundo, 0.20)
+                    OnSelect: |-
+                        =UpdateContext({varContainerFasesSustain:false})
+                    PressedColor: =RGBA(116, 116, 116, 1)
+                    PressedFill: =CorFundo
+                    Size: =12
+                    Text: ="Cancelar"
+                    Width: =129*1
+                    X: =1052*1
+                    Y: =117*1
+                    ZIndex: =2
+
+            "'Fase Status_DataCard4' As typedDataCard.textualEditCard":
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Opcao"
+                Default: =ThisItem.'Fase Status'
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@Sustain],DataSourceInfo.DisplayName,"Opcao")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                MaxLength: =DataSourceInfo([@Sustain], DataSourceInfo.MaxLength, "Opcao")
+                Required: =false
+                Update: =DataCardValue28_3.Selected.Value
+                Width: =438
+                X: =0
+                Y: =0
+                ZIndex: =6
+
+                DataCardKey2_37 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =34*1
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30*1
+                    Y: =10*1
+                    ZIndex: =1
+
+                ErrorMessage2_37 As label:
+                    AutoHeight: =true
+                    Height: =10*1
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30*1
+                    Y: =89*1
+                    ZIndex: =2
+
+                StarVisible2_37 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =DataCardKey2_37.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30*1
+                    Wrap: =false
+                    X: =0*1
+                    Y: =DataCardKey2_37.Y
+                    ZIndex: =3
+
+                Button4_37 As button:
+                    BorderThickness: =1
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    Height: =40*1
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Text: =""
+                    Width: =374*1
+                    X: =30*1
+                    Y: =48*1
+                    ZIndex: =4
+
+                DataCardValue28_3 As combobox:
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =0
+                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                    ChevronFill: =RGBA(47, 129, 101, 1)
+                    ChevronHoverBackground: =RGBA(0, 0, 0, 0)
+                    ChevronHoverFill: =RGBA(47, 129, 101, 1)
+                    DefaultSelectedItems: |-
+                        ={Value:Parent.Default}
+                    DisplayFields: =["DisplayName","Email","Picture"]
+                    FocusedBorderThickness: =0
+                    Height: =36*1
+                    HoverBorderColor: =
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    IsSearchable: =false
+                    Items: =["In Progress", "Completed", "Canceled"]
+                    NoSelectionText: ="Insira a " & Parent.DisplayName
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    SearchFields: =["Value"]
+                    SearchItems: =[]
+                    SelectionFill: =RGBA(47, 129, 101, 1)
+                    SelectMultiple: =false
+                    Size: =11
+                    Width: =370*1
+                    X: =32*1
+                    Y: =50*1
+                    ZIndex: =5
+
+            Descrição_DataCard4 As typedDataCard.textualEditCard:
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="Descricao"
+                Default: =ThisItem.Descrição
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@Sustain],DataSourceInfo.DisplayName,"Descricao")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =281
+                MaxLength: =DataSourceInfo([@Sustain], DataSourceInfo.MaxLength, "Descricao")
+                Required: =false
+                Update: =DataCardValue41_1.Text
+                Width: =Parent.Width
+                X: =1
+                Y: =0
+                ZIndex: =6
+
+                DataCardKey2_38 As label:
+                    AutoHeight: =true
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =34*1
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30*1
+                    Y: =10*1
+                    ZIndex: =1
+
+                ErrorMessage2_38 As label:
+                    AutoHeight: =true
+                    Height: =10*1
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30*1
+                    Y: =DataCardValue41_1.Y + DataCardValue41_1.Height
+                    ZIndex: =2
+
+                StarVisible2_38 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =DataCardKey2_38.Height
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30*1
+                    Wrap: =false
+                    X: =0*1
+                    Y: =DataCardKey2_38.Y
+                    ZIndex: =3
+
+                Button4_38 As button:
+                    BorderThickness: =1
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    Height: =205*1
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Text: =""
+                    Width: =1254*1
+                    X: =30*1
+                    Y: =48*1
+                    ZIndex: =4
+
+                DataCardValue41_1 As text:
+                    BorderStyle: =BorderStyle.None
+                    Default: =Parent.Default
+                    DelayOutput: =true
+                    DisplayMode: =Parent.DisplayMode
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =205*1
+                    HintText: ="Insira a descrição"
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Mode: =TextMode.MultiLine
+                    PaddingLeft: =5
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Size: =11
+                    Tooltip: =Parent.DisplayName
+                    Width: =1254*1
+                    X: =30*1
+                    Y: =DataCardKey2_38.Y + DataCardKey2_38.Height + 5
+                    ZIndex: =5
 
     cmpShellLoading_2 As cmpShellLoading:
         Visible: =VarLoading
-        ZIndex: =12
+        ZIndex: =16
 

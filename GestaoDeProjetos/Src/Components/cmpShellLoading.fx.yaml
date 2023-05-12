@@ -13,21 +13,17 @@ cmpShellLoading As CanvasComponent:
         Width: =Parent.Width
         ZIndex: =1
 
-    "Spinner1 As 'Controle giratório'":
-        Appearance: ='PowerApps.CoreControls.Spinner.Appearance'.Primary
-        DisplayMode: =DisplayMode.Edit
-        Height: =262
-        LabelPosition: ='PowerApps.CoreControls.Spinner.LabelPosition'.Above
-        SpinnerSize: ='PowerApps.CoreControls.Spinner.SpinnerSize'.Large
-        Width: =400
-        X: =505
-        Y: =336
-        ZIndex: =4
-
     imgLogoLoading As image:
         BorderColor: =RGBA(32, 54, 71, 1)
-        Image: ='Instituto_Federal_de_São_Paulo_-_Marca_Vertical_2015.svg'
+        Image: =LogoIFSP
         X: =655
         Y: =319
         ZIndex: =5
+
+    imgLogoLoading_1 As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Image: ='Ellipsis-3s-200px'
+        X: =655
+        Y: =399
+        ZIndex: =6
 
